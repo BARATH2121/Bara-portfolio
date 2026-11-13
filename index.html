@@ -1632,8 +1632,16 @@
       transform: translateX(-50%);
       top: 86px;
       width: min(88vw, 370px);
+      max-height: calc(100dvh - 190px);
+      overflow-y: auto;
       min-height: 0;
       padding: 18px 22px 16px 28px;
+      box-sizing: border-box;
+    }
+    @media (max-width: 380px) {
+      .ticket { width: calc(100vw - 36px); padding: 15px 17px 14px 22px; }
+      .ticket h2 { font-size: clamp(23px, 8vw, 30px); overflow-wrap: anywhere; }
+      .ticket-360-video-wrap { width: min(100%, 108px); }
     }
     .hole { width: 14px; height: 14px; }
     .ticket h2 { font-size: 30px; }
@@ -2827,10 +2835,13 @@
 
   function caseIn(first) {
     const d = RM ? 0 : (first ? 150 : 0);
+    // The mobile ticket is centered with translateX(-50%). Preserve that
+    // centering throughout the entrance animation instead of ending at transform:none.
+    const ticketCenter = window.innerWidth <= 820 ? 'translateX(-50%) ' : '';
     ticket.animate([
-      { opacity: 0, transform: 'translateY(-56px) rotate(-6deg)' },
-      { opacity: 1, transform: 'translateY(6px) rotate(1.2deg)', offset: 0.7 },
-      { opacity: 1, transform: 'none' }
+      { opacity: 0, transform: `${ticketCenter}translateY(-56px) rotate(-6deg)` },
+      { opacity: 1, transform: `${ticketCenter}translateY(6px) rotate(1.2deg)`, offset: 0.7 },
+      { opacity: 1, transform: ticketCenter.trim() || 'none' }
     ], { duration: RM ? 0 : 780, delay: d, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'both' });
 
     const kids = Array.from(caseDesc.children);
@@ -2844,9 +2855,10 @@
 
   function caseOut() {
     if (RM) return Promise.resolve();
+    const ticketCenter = window.innerWidth <= 820 ? 'translateX(-50%) ' : '';
     const p1 = ticket.animate([
-      { opacity: 1, transform: 'none' },
-      { opacity: 0, transform: 'translateY(-40px) rotate(4deg)' }
+      { opacity: 1, transform: ticketCenter.trim() || 'none' },
+      { opacity: 0, transform: `${ticketCenter}translateY(-40px) rotate(4deg)` }
     ], { duration: 360, easing: 'cubic-bezier(.5,0,.75,0)', fill: 'both' }).finished;
 
     const kids = Array.from(caseDesc.children);
