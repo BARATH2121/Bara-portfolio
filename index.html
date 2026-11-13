@@ -1680,16 +1680,17 @@
   /* Hero typography: keep the complete name visible and keep the tagline
      clear of the 9:16 portrait video. */
   .frame > svg.wm {
-    left: 22px;
-    top: 24px;
-    width: 540px;
-    height: 220px;
+    /* Keep the full name balanced in the left column, clear of the portrait. */
+    left: 18px;
+    top: 74px;
+    width: 520px;
+    height: 160px;
     z-index: 3;
-    overflow: visible;
+    overflow: hidden;
   }
   .frame > svg.wm text {
-    font-size: 190px;
-    letter-spacing: -7px;
+    font-size: 148px;
+    letter-spacing: -4px;
   }
   .frame > .script {
     left: 42px;
@@ -1728,7 +1729,7 @@
           <stop offset="1" stop-color="#E50932" stop-opacity="0.24"/>
         </linearGradient>
       </defs>
-      <text x="12" y="178" textLength="500" lengthAdjust="spacingAndGlyphs">BARATH M</text>
+      <text x="10" y="132" textLength="490" lengthAdjust="spacingAndGlyphs">BARATH M</text>
     </svg>
 
     <!-- Barath portrait video — 9:16; the small ID-card photo remains unchanged -->
