@@ -1,0 +1,3343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Barath M — Software Developer &amp; Technology Specialist</title>
+<meta name="description" content="Portfolio of Barath M — a Computer Science student (Cognitive Systems) working across software development, AI, cloud technologies, IT support and hardware solutions.">
+
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0A0A0A">
+<link rel="canonical" href="https://mbarath.vercel.app/">
+<meta name="robots" content="index, follow">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Barath M",
+  "url": "https://mbarath.vercel.app/",
+  "jobTitle": "Software Developer & Technology Specialist",
+  "email": "mailto:mbarath2121@gmail.com",
+  "telephone": "+91-9789223360",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Coimbatore",
+    "addressRegion": "Tamil Nadu",
+    "addressCountry": "IN"
+  },
+  "sameAs": [
+    "https://github.com/BARATH2121",
+    "https://www.linkedin.com/in/barath-m-7044502a3"
+  ],
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Dr. N.G.P. Arts and Science College"
+  }
+}
+</script>
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Barath M — Software Developer & Technology Specialist">
+<meta property="og:description" content="I build, fix and engineer technology. Software · AI · Cloud · IT Support · Hardware.">
+<meta property="og:image" content="assets/favicon-512.png">
+<meta name="twitter:card" content="summary">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat+Brush&family=Inter+Tight:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --crimson: #E50932;
+    --deep-red: #8A0303;
+    --burgundy: #2B0000;
+    --bg-main: #0A0A0A;
+    --bg-sec: #140608;
+    --bg-card: #1A0A0D;
+    --border-red: #54202A;
+    --text-primary: #FFFFFF;
+    --text-secondary: #B8AEB1;
+    --accent-glow: #FF244D;
+    --ink: #0D090A;
+    --n: 1px;
+    --glide: 1.6s;
+    --mbs: 0.2;
+    --th: 180px;
+  }
+
+  @property --mt { syntax: '<length>'; inherits: true; initial-value: 0px; }
+  @property --m0 { syntax: '<length>'; inherits: true; initial-value: 0px; }
+  @property --mb { syntax: '<length>'; inherits: true; initial-value: 0px; }
+  @property --ms { syntax: '<length>'; inherits: true; initial-value: 0px; }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html {
+    background: var(--bg-main);
+    color: var(--text-primary);
+    font-family: 'Inter Tight', system-ui, -apple-system, sans-serif;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  body {
+    background: var(--bg-main);
+    color: var(--text-primary);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  body.stage-locked {
+    height: 100dvh;
+    overflow: hidden;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+  img { display: block; max-width: 100%; }
+
+  .skip-link {
+    position: fixed; left: -9999px; top: 12px; z-index: 999;
+    background: var(--crimson); color: #fff; padding: 10px 16px;
+    font-weight: 700; border-radius: 4px;
+  }
+  .skip-link:focus { left: 12px; }
+
+  .js .pre { opacity: 0; }
+
+  /* =========================================================
+     1. CINEMATIC HERO + LAPTOP DIVE STAGE (100dvh)
+     ========================================================= */
+  .stage {
+    position: relative;
+    width: 100%;
+    height: 100dvh;
+    min-height: 620px;
+    overflow: hidden;
+    background:
+      radial-gradient(ellipse 80% 70% at 62% 48%, rgba(138, 3, 3, 0.52) 0%, rgba(43, 0, 0, 0.7) 45%, #0A0A0A 100%),
+      linear-gradient(180deg, #140608 0%, #2B0000 58%, #0A0A0A 100%);
+    user-select: none;
+  }
+
+  .stage::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 50% 48%, rgba(229, 9, 50, 0.24) 0%, rgba(43, 0, 0, 0.85) 55%, #0A0A0A 100%);
+    opacity: 0;
+    transition: opacity 1.6s cubic-bezier(.65,0,.35,1);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .stage.m-case::before { opacity: 1; }
+
+  /* Studio architectural red light beams */
+  .studio-beams {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
+  }
+  .studio-beams::before {
+    content: "";
+    position: absolute;
+    inset: -10%;
+    background:
+      linear-gradient(108deg, transparent 22%, rgba(229,9,50,0.12) 25%, transparent 29%),
+      linear-gradient(72deg, transparent 66%, rgba(255,36,77,0.14) 70%, transparent 74%),
+      radial-gradient(ellipse 65% 24% at 50% 94%, rgba(229,9,50,0.28), transparent 72%);
+  }
+
+  /* 1440x810 Master Scene Frame */
+  .frame {
+    position: absolute;
+    left: 0; top: 0;
+    width: 1440px;
+    height: 810px;
+    transform-origin: 0 0;
+    z-index: 2;
+    perspective: 1600px;
+    --mt: 0px; --m0: 0px; --mb: 0px; --ms: 0px;
+    transition: --mt var(--glide) cubic-bezier(.65,0,.35,1),
+                --m0 var(--glide) cubic-bezier(.65,0,.35,1),
+                --mb var(--glide) cubic-bezier(.65,0,.35,1),
+                --ms var(--glide) cubic-bezier(.65,0,.35,1);
+  }
+  .frame.glide {
+    transition: transform var(--glide) cubic-bezier(.65,0,.35,1),
+                --mt var(--glide) cubic-bezier(.65,0,.35,1),
+                --m0 var(--glide) cubic-bezier(.65,0,.35,1),
+                --mb var(--glide) cubic-bezier(.65,0,.35,1),
+                --ms var(--glide) cubic-bezier(.65,0,.35,1);
+  }
+  .frame.d-fade.m-case { --m0: 0px; --mt: 110px; --mb: 60px; --ms: 170px; }
+  .frame.m-fade { --m0: 0px; --mt: 170px; --mb: 0px; --ms: 140px; }
+  .frame.m-fade.m-case { --m0: 48px; --mt: 40px; --mb: 70px; --ms: 140px; }
+
+  /* Giant Background Wordmark */
+  svg.wm {
+    position: absolute;
+    left: 0; top: 18px;
+    width: 1440px; height: 270px;
+    overflow: visible;
+    z-index: 3;
+    pointer-events: none;
+  }
+  svg.wm text {
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 900;
+    font-size: 256px;
+    letter-spacing: -8px;
+    fill: url(#wmGrad);
+  }
+
+  /* Hero portrait video — exact 9:16 frame */
+  .hero-plate-wrap {
+    position: absolute;
+    left: 568px;
+    top: 38px;
+    width: 434px;
+    height: 772px;
+    aspect-ratio: 9 / 16;
+    z-index: 4;
+    pointer-events: none;
+    transform-origin: 50% 55%;
+    overflow: hidden;
+    border-radius: 3px;
+  }
+  .hero-plate-video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 9 / 16;
+    object-fit: contain;
+    object-position: center;
+    filter: contrast(1.04) saturate(1.06);
+  }
+  .hero-floor-glow {
+    position: absolute;
+    left: 430px; bottom: -20px;
+    width: 700px; height: 150px;
+    background: radial-gradient(ellipse at center, rgba(229,9,50,0.42) 0%, rgba(138,3,3,0.16) 50%, transparent 78%);
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  /* Handwritten Tagline */
+  .script {
+    position: absolute;
+    left: 88px;
+    top: 174px;
+    font-family: 'Caveat Brush', cursive;
+    font-size: 70px;
+    line-height: 1;
+    color: #FFFFFF;
+    letter-spacing: -0.5px;
+    transform: rotate(-7deg);
+    transform-origin: 0 50%;
+    text-shadow: 0 4px 22px rgba(229, 9, 50, 0.45), 0 2px 12px rgba(0,0,0,0.75);
+    white-space: nowrap;
+    z-index: 6;
+    pointer-events: none;
+  }
+
+  /* Hanging Lanyard ID Badge */
+  .badge {
+    position: absolute;
+    left: 1020px;
+    top: -120px;
+    width: 410px;
+    height: 760px;
+    transform-origin: 205px 0;
+    z-index: 7;
+    pointer-events: none;
+  }
+  .badge-strap {
+    position: absolute;
+    left: 185px;
+    top: 0;
+    width: 40px;
+    height: 224px;
+    background: linear-gradient(90deg, #1b0b0e 0%, #3a1219 45%, #160709 100%);
+    border-left: 1px solid rgba(255,255,255,0.12);
+    border-right: 1px solid rgba(229,9,50,0.35);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.65);
+  }
+  .badge-strap::after {
+    content: "BARATH.M // TECH";
+    position: absolute;
+    left: 50%; top: 55%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.22em;
+    color: rgba(255,255,255,0.55);
+    white-space: nowrap;
+  }
+  .badge-clip {
+    position: absolute;
+    left: 181px;
+    top: 214px;
+    width: 48px;
+    height: 36px;
+    border-radius: 6px 6px 10px 10px;
+    background: linear-gradient(145deg, #d8d4d6, #7a7275 50%, #c9c3c6);
+    border: 1px solid rgba(255,255,255,0.35);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.55);
+  }
+  .badge-clip::after {
+    content: "";
+    position: absolute;
+    left: 14px; bottom: -10px;
+    width: 20px; height: 14px;
+    border: 3px solid #b5aeb1;
+    border-radius: 999px;
+  }
+  .badge-sleeve {
+    position: absolute;
+    left: 62px;
+    top: 248px;
+    width: 286px;
+    height: 468px;
+    border-radius: 14px;
+    padding: 12px;
+    background: linear-gradient(155deg, rgba(255,255,255,0.16) 0%, rgba(255,255,255,0.04) 45%, rgba(229,9,50,0.08) 100%);
+    border: 1.5px solid rgba(255,255,255,0.28);
+    box-shadow: 0 28px 60px rgba(0,0,0,0.72), inset 0 1px 0 rgba(255,255,255,0.45);
+    backdrop-filter: blur(8px);
+  }
+  .badge-sleeve::before {
+    content: "";
+    position: absolute;
+    left: 50%; top: 10px;
+    transform: translateX(-50%);
+    width: 44px; height: 9px;
+    border-radius: 99px;
+    background: rgba(10,10,10,0.65);
+    border: 1px solid rgba(255,255,255,0.22);
+  }
+  .badge-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: 8px;
+    height: calc(100% - 8px);
+    background: linear-gradient(170deg, #1A0A0D 0%, #100507 100%);
+    border: 1px solid var(--border-red);
+    border-radius: 8px;
+    padding: 16px 15px 12px;
+    color: #FFFFFF;
+    overflow: hidden;
+  }
+  .badge-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(125deg, rgba(255,255,255,0.12) 0%, transparent 40%, rgba(229,9,50,0.08) 100%);
+    pointer-events: none;
+  }
+  .badge-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid rgba(229,9,50,0.5);
+    padding-bottom: 7px;
+  }
+  .badge-head h4 {
+    font-size: 20px;
+    line-height: 0.96;
+    font-weight: 800;
+    letter-spacing: -0.4px;
+    text-transform: uppercase;
+  }
+  .badge-head h4 span { color: var(--crimson); }
+  .badge-yr {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--accent-glow);
+    border: 1px solid var(--border-red);
+    padding: 2px 6px;
+    border-radius: 3px;
+  }
+  .badge-role {
+    margin-top: 6px;
+    font-size: 8.5px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+  }
+  .badge-photo {
+    width: 82px;
+    height: 96px;
+    margin: 9px auto 8px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: radial-gradient(circle at 50% 35%, #5e0814, #140608);
+    border: 1.5px solid var(--crimson);
+    box-shadow: 0 0 18px rgba(229,9,50,0.28);
+    position: relative;
+  }
+  .badge-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 5%;
+    transform: scale(1.85);
+    transform-origin: 50% 10%;
+  }
+  .badge-photo-fallback {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 20px;
+    color: rgba(255,255,255,0.25);
+    letter-spacing: 0.08em;
+    z-index: 0;
+  }
+  .badge-photo img { position: relative; z-index: 1; }
+  .badge-rows { display: flex; flex-direction: column; gap: 3px; }
+  .badge-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8px;
+    font-size: 8px;
+    padding: 3px 0;
+    border-bottom: 1px dotted rgba(255,255,255,0.22);
+  }
+  .badge-row span {
+    color: var(--text-secondary);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    flex-shrink: 0;
+  }
+  .badge-row b {
+    font-weight: 600;
+    color: #fff;
+    text-align: right;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .badge-hit {
+    position: absolute;
+    left: 52px;
+    top: 238px;
+    width: 306px;
+    height: 486px;
+    pointer-events: auto;
+    cursor: grab;
+  }
+
+  /* =========================================================
+     3D FLOATING LAPTOP & CASE SCREEN (Laptop Dive Target)
+     ========================================================= */
+  .dive-backdrop {
+    position: absolute;
+    inset: -120px;
+    background: radial-gradient(circle at 50% 50%, rgba(138,3,3,0.4) 0%, rgba(10,10,10,0.96) 65%);
+    opacity: 0;
+    z-index: 7;
+    pointer-events: none;
+  }
+
+  .laptop-rig {
+    position: absolute;
+    left: 232px;
+    top: 76px;
+    width: 976px;
+    height: 668px;
+    z-index: 8;
+    opacity: 0;
+    pointer-events: none;
+    transform-style: preserve-3d;
+    transform-origin: 50% 50%;
+  }
+
+  /* Precision silver hardware bezel matching Barath's laptop */
+  .laptop-lid {
+    position: absolute;
+    left: 24px;
+    top: 12px;
+    width: 928px;
+    height: 626px;
+    border-radius: 18px 18px 8px 8px;
+    background: linear-gradient(145deg, #d7d7db 0%, #8f9096 42%, #b9bac0 75%, #6d6e74 100%);
+    padding: 14px 16px 16px;
+    box-shadow:
+      0 35px 90px rgba(0,0,0,0.85),
+      0 0 80px rgba(229, 9, 50, 0.25),
+      inset 0 1px 1px rgba(255,255,255,0.75);
+  }
+  .laptop-bezel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #070607;
+    border-radius: 10px 10px 4px 4px;
+    padding: 14px 12px 12px;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+  }
+  .laptop-cam {
+    position: absolute;
+    left: 50%;
+    top: 5px;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #1a1a1d;
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.12);
+  }
+  .laptop-base {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 976px;
+    height: 30px;
+    border-radius: 4px 4px 18px 18px;
+    background: linear-gradient(180deg, #b5b6bc 0%, #7d7e85 60%, #4b4c52 100%);
+    box-shadow: 0 22px 44px rgba(0,0,0,0.85);
+  }
+  .laptop-base::before {
+    content: "";
+    position: absolute;
+    left: 50%; top: 0;
+    transform: translateX(-50%);
+    width: 140px; height: 6px;
+    border-radius: 0 0 8px 8px;
+    background: #525359;
+  }
+
+  /* The Interactive Screen inside the Laptop */
+  .screen {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    background: #0A0A0A;
+    overflow: hidden;
+  }
+  .screen::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(115deg, rgba(255,255,255,0.07) 0%, rgba(255,255,255,0) 38%);
+    pointer-events: none;
+    z-index: 4;
+  }
+  .screen .flash {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, #ffffff 0%, #ff244d 55%, #0A0A0A 100%);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 5;
+  }
+
+  .case-stage-view {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    background: radial-gradient(circle at 80% 18%, rgba(229,9,50,0.18), transparent 55%), #0D0708;
+  }
+  .case-stage-view.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .screen-hit {
+    position: absolute;
+    left: 262px;
+    top: 104px;
+    width: 916px;
+    height: 582px;
+    z-index: 12;
+    cursor: pointer;
+    display: none;
+  }
+
+  /* Mock/Live UI inside laptop screen */
+  .scr-chrome {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 16px;
+    background: rgba(20, 6, 8, 0.94);
+    border-bottom: 1px solid var(--border-red);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-secondary);
+  }
+  .scr-dots { display: flex; gap: 6px; align-items: center; }
+  .scr-dots span { width: 8px; height: 8px; border-radius: 50%; background: var(--border-red); }
+  .scr-dots span:first-child { background: var(--crimson); }
+  .scr-status {
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    border: 1px solid var(--crimson);
+    color: #fff;
+    background: rgba(229,9,50,0.18);
+  }
+  .scr-status.dev {
+    border-color: var(--accent-glow);
+    background: rgba(255,36,77,0.16);
+    color: var(--accent-glow);
+  }
+  .scr-body {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+  }
+  .scr-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 4px;
+    border: 1px solid rgba(229,9,50,0.3);
+  }
+  .scr-mockup {
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--border-red);
+    border-radius: 8px;
+    background: linear-gradient(150deg, #16070A 0%, #0B0506 100%);
+    padding: 26px 28px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 18px;
+  }
+  .scr-mock-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(84,32,42,0.7);
+    padding-bottom: 12px;
+  }
+  .scr-mock-kicker {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--accent-glow);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  .scr-mock-title {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-top: 4px;
+  }
+  .scr-mock-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 16px;
+    align-items: stretch;
+  }
+  .scr-panel {
+    background: rgba(26, 10, 13, 0.88);
+    border: 1px solid var(--border-red);
+    border-radius: 6px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .scr-panel h5 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-secondary);
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+  .scr-panel p {
+    font-size: 14px;
+    line-height: 1.48;
+    color: rgba(255,255,255,0.9);
+  }
+  .scr-flow-box {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11.5px;
+    line-height: 1.65;
+    color: #fff;
+    padding: 12px;
+    background: rgba(43, 0, 0, 0.45);
+    border: 1px dashed rgba(229,9,50,0.65);
+    border-radius: 4px;
+  }
+  .scr-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .scr-chips span {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    background: rgba(229,9,50,0.12);
+    border: 1px solid var(--border-red);
+    color: #fff;
+  }
+
+  /* =========================================================
+     2. VIEWPORT-PINNED UI OVERLAY (.ui)
+     ========================================================= */
+  .ui {
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+  }
+  .ui.ui-hidden {
+    opacity: 0;
+    pointer-events: none !important;
+  }
+
+  .tag {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(37 * var(--n));
+    padding: 0 calc(18 * var(--n));
+    background: #FFFFFF;
+    color: var(--ink);
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 700;
+    font-size: calc(15 * var(--n));
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    pointer-events: auto;
+    box-shadow: 0 calc(3 * var(--n)) 0 var(--crimson), 0 calc(8 * var(--n)) calc(18 * var(--n)) rgba(0,0,0,0.45);
+    transition: transform .25s cubic-bezier(.2,.8,.2,1), box-shadow .25s cubic-bezier(.2,.8,.2,1), background .2s;
+  }
+  .tag:hover {
+    transform: translateY(calc(-2 * var(--n))) rotate(-1.5deg);
+    background: #fff;
+    box-shadow: 0 calc(5 * var(--n)) 0 var(--accent-glow), 0 calc(12 * var(--n)) calc(22 * var(--n)) rgba(229,9,50,0.35);
+  }
+  .tag:active {
+    transform: translateY(calc(1 * var(--n)));
+    box-shadow: 0 calc(1 * var(--n)) 0 var(--crimson);
+  }
+  .tag.t1 { left: calc(30 * var(--n)); top: calc(10 * var(--n)); }
+  .tag.t2 { left: calc(176 * var(--n)); top: calc(10 * var(--n)); }
+  .tag.t3 { right: calc(238 * var(--n)); top: calc(10 * var(--n)); }
+  .tag.t4 { right: calc(32 * var(--n)); top: calc(10 * var(--n)); background: var(--crimson); color: #fff; box-shadow: 0 calc(3 * var(--n)) 0 #fff, 0 calc(8 * var(--n)) calc(18 * var(--n)) rgba(0,0,0,0.5); }
+  .tag.t4:hover { background: var(--accent-glow); }
+
+  .center-logo {
+    position: absolute;
+    left: 50%;
+    top: calc(15 * var(--n));
+    transform: translateX(-50%);
+    font-weight: 700;
+    font-size: calc(18 * var(--n));
+    letter-spacing: 0.18em;
+    color: #fff;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    text-transform: uppercase;
+  }
+  body.is-case .center-logo {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Scroll Hint */
+  .scroll-hint {
+    position: absolute;
+    left: 50%;
+    bottom: calc(22 * var(--n));
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: calc(10 * var(--n));
+    font-size: calc(11.5 * var(--n));
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.88);
+    pointer-events: auto;
+  }
+  .scroll-line {
+    position: relative;
+    width: calc(1.5 * var(--n));
+    height: calc(22 * var(--n));
+    background: rgba(255,255,255,0.28);
+    overflow: hidden;
+  }
+  .scroll-line::after {
+    content: "";
+    position: absolute;
+    left: 0; top: -40%;
+    width: 100%; height: 40%;
+    background: var(--crimson);
+    animation: drip 1.6s cubic-bezier(.6,0,.4,1) infinite;
+  }
+  @keyframes drip { to { top: 100%; } }
+  body.is-case .scroll-hint,
+  body.busy .scroll-hint { visibility: hidden; }
+
+  .hint-actions {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+  }
+  .dossier-jump {
+    pointer-events: auto;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: calc(11 * var(--n));
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border-red);
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .dossier-jump:hover { color: #fff; border-color: var(--crimson); }
+
+  /* Case Mode Filter Bar (Desktop top-left under nav) */
+  .case-filters {
+    position: absolute;
+    left: calc(28 * var(--n));
+    top: calc(74 * var(--n));
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(6 * var(--n));
+    max-width: calc(240 * var(--n));
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+  }
+  body.is-case .case-filters {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .case-filter-pill {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: calc(10.5 * var(--n));
+    padding: calc(4 * var(--n)) calc(9 * var(--n));
+    border-radius: 3px;
+    border: 1px solid var(--border-red);
+    background: rgba(20,6,8,0.85);
+    color: var(--text-secondary);
+    transition: all 0.2s;
+  }
+  .case-filter-pill[aria-pressed="true"],
+  .case-filter-pill:hover {
+    border-color: var(--crimson);
+    background: var(--crimson);
+    color: #fff;
+  }
+
+  /* Punched Paper Ticket Card (Crimson Edition) */
+  .ticket {
+    position: absolute;
+    right: calc(32 * var(--n));
+    top: calc(96 * var(--n));
+    width: calc(352 * var(--n));
+    min-height: calc(196 * var(--n));
+    background: linear-gradient(165deg, #1A0A0D 0%, #110608 100%);
+    border: 1px solid var(--crimson);
+    border-radius: calc(4 * var(--n));
+    box-shadow: 0 calc(20 * var(--n)) calc(44 * var(--n)) rgba(0,0,0,0.65), 0 0 calc(28 * var(--n)) rgba(229,9,50,0.18);
+    padding: calc(24 * var(--n)) calc(32 * var(--n)) calc(20 * var(--n)) calc(40 * var(--n));
+    transform-origin: 50% 0;
+    opacity: 0;
+    pointer-events: none;
+  }
+  body.is-case .ticket { pointer-events: auto; }
+  .hole {
+    position: absolute;
+    width: calc(20 * var(--n));
+    height: calc(20 * var(--n));
+    border-radius: 50%;
+    background: var(--bg-main);
+    border: 1px solid var(--border-red);
+    box-shadow: inset 0 calc(2 * var(--n)) calc(4 * var(--n)) rgba(0,0,0,0.85);
+  }
+  .hole.tl { left: calc(11 * var(--n)); top: calc(11 * var(--n)); }
+  .hole.tr { right: calc(11 * var(--n)); top: calc(11 * var(--n)); }
+  .hole.bl { left: calc(11 * var(--n)); bottom: calc(11 * var(--n)); }
+  .hole.br { right: calc(11 * var(--n)); bottom: calc(11 * var(--n)); }
+
+  .ticket h2 {
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    font-size: calc(38 * var(--n));
+    line-height: 1.02;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+    text-transform: uppercase;
+  }
+  .ticket-rows {
+    margin-top: calc(10 * var(--n));
+  }
+  .ticket-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    font-size: calc(11 * var(--n));
+    letter-spacing: 0.04em;
+    padding: calc(5 * var(--n)) 0 calc(4 * var(--n));
+    border-bottom: 1.5px dotted var(--border-red);
+    color: var(--text-secondary);
+  }
+  .ticket-row b { color: #fff; font-weight: 600; text-align: right; }
+  .ticket-links {
+    display: flex;
+    gap: calc(10 * var(--n));
+    margin-top: calc(12 * var(--n));
+    flex-wrap: wrap;
+  }
+  .ticket-link {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: calc(11 * var(--n));
+    font-weight: 600;
+    padding: calc(5 * var(--n)) calc(10 * var(--n));
+    border-radius: 3px;
+    background: var(--crimson);
+    color: #fff;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .ticket-link:hover { background: var(--accent-glow); transform: translateY(-1px); }
+  .ticket-link.ghost {
+    background: transparent;
+    border: 1px solid var(--border-red);
+    color: #fff;
+  }
+  .ticket-360-video-wrap {
+    position: relative;
+    width: min(100%, calc(124 * var(--n)));
+    aspect-ratio: 9 / 16;
+    margin: calc(16 * var(--n)) auto calc(2 * var(--n));
+    overflow: hidden;
+    border: 1px solid rgba(229,9,50,0.72);
+    border-radius: calc(4 * var(--n));
+    background: #080506;
+    box-shadow: 0 0 calc(22 * var(--n)) rgba(229,9,50,0.16);
+  }
+  .ticket-360-video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 9 / 16;
+    object-fit: contain;
+    object-position: center;
+  }
+  .ticket-dev-note {
+    margin-top: calc(10 * var(--n));
+    font-family: 'JetBrains Mono', monospace;
+    font-size: calc(10 * var(--n));
+    color: var(--accent-glow);
+    letter-spacing: 0.06em;
+  }
+
+  /* Case Description (left side) */
+  .case-desc {
+    position: absolute;
+    left: calc(28 * var(--n));
+    top: calc(272 * var(--n));
+    width: calc(215 * var(--n));
+    pointer-events: none;
+  }
+  .case-desc > * { opacity: 0; }
+  .case-desc .k {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    font-size: calc(15 * var(--n));
+    letter-spacing: -0.02em;
+    color: var(--accent-glow);
+  }
+  .case-desc p {
+    margin-top: calc(12 * var(--n));
+    font-size: calc(14 * var(--n));
+    line-height: 1.42;
+    font-weight: 500;
+    color: rgba(255,255,255,0.92);
+  }
+  .case-desc .num {
+    margin-top: calc(18 * var(--n));
+    font-family: 'JetBrains Mono', monospace;
+    font-size: calc(12 * var(--n));
+    letter-spacing: 0.16em;
+    font-weight: 700;
+    color: var(--text-secondary);
+  }
+
+  /* Circular Prev / Next Case Buttons */
+  .nav-case {
+    position: absolute;
+    bottom: calc(130 * var(--n));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: calc(9 * var(--n));
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  body.is-case .nav-case {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .nav-case.prev { left: calc(84 * var(--n)); }
+  .nav-case.next { right: calc(84 * var(--n)); }
+  .nav-case.dim { opacity: 0.48 !important; }
+  .nav-case .c {
+    width: calc(50 * var(--n));
+    height: calc(50 * var(--n));
+    border-radius: 50%;
+    border: 1.6px solid rgba(255,255,255,0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.25s cubic-bezier(.2,.8,.2,1), background 0.25s, border-color 0.25s;
+  }
+  .nav-case svg { width: calc(22 * var(--n)); height: calc(22 * var(--n)); stroke: #fff; fill: none; stroke-width: 2; }
+  .nav-case.next .c {
+    background: var(--crimson);
+    border-color: var(--crimson);
+    box-shadow: 0 0 24px rgba(229,9,50,0.45);
+  }
+  .nav-case.next:hover .c { background: var(--accent-glow); border-color: var(--accent-glow); }
+  .nav-case:hover .c { transform: scale(1.08); }
+  .nav-case span {
+    font-weight: 600;
+    font-size: calc(14 * var(--n));
+    line-height: 1.08;
+    text-align: center;
+    color: #fff;
+  }
+
+  /* Bottom Bar inside Case Mode to open full portfolio */
+  .case-bottom-bar {
+    position: absolute;
+    left: 50%;
+    bottom: calc(20 * var(--n));
+    transform: translateX(-50%);
+    display: flex;
+    gap: calc(12 * var(--n));
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+  }
+  body.is-case .case-bottom-bar { opacity: 1; pointer-events: auto; }
+  .pill-btn {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: calc(11.5 * var(--n));
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: calc(9 * var(--n)) calc(18 * var(--n));
+    border-radius: 999px;
+    background: rgba(26,10,13,0.92);
+    border: 1px solid var(--border-red);
+    color: #fff;
+    backdrop-filter: blur(8px);
+    transition: border-color 0.2s, background 0.2s, transform 0.2s;
+  }
+  .pill-btn:hover {
+    border-color: var(--crimson);
+    background: rgba(229,9,50,0.22);
+    transform: translateY(-2px);
+  }
+
+  /* Mobile-only UI inside .ui */
+  .m-only { display: none; }
+
+  /* =========================================================
+     3. FULL PORTFOLIO DOSSIER SECTIONS (Below Stage)
+     ========================================================= */
+  .dossier-nav {
+    position: sticky;
+    top: 0;
+    z-index: 35;
+    background: rgba(10, 10, 10, 0.88);
+    backdrop-filter: blur(14px);
+    border-top: 1px solid var(--border-red);
+    border-bottom: 1px solid var(--border-red);
+  }
+  .dossier-nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    height: 62px;
+  }
+  .nav-logo {
+    font-weight: 800;
+    font-size: 15px;
+    letter-spacing: 0.14em;
+    color: #fff;
+    white-space: nowrap;
+  }
+  .nav-logo span { color: var(--crimson); }
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    align-items: center;
+  }
+  .nav-links a {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: #fff; }
+  .nav-right-actions { display: flex; gap: 10px; align-items: center; }
+  .nav-resume {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 4px;
+    border: 1px solid var(--crimson);
+    color: #fff;
+    background: rgba(229,9,50,0.14);
+    transition: background 0.2s;
+  }
+  .nav-resume:hover { background: var(--crimson); }
+  .nav-dive-btn {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid var(--border-red);
+    color: var(--text-secondary);
+  }
+  .nav-dive-btn:hover { color: #fff; border-color: var(--crimson); }
+
+  .container {
+    width: min(1160px, 92vw);
+    margin: 0 auto;
+  }
+
+  .dossier section {
+    padding: 88px 0;
+    border-bottom: 1px solid rgba(84, 32, 42, 0.45);
+    position: relative;
+  }
+  .dossier section:nth-child(even) { background: var(--bg-sec); }
+
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent-glow);
+    margin-bottom: 12px;
+  }
+  .section-heading {
+    font-size: clamp(1.9rem, 3.8vw, 2.85rem);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+    margin-bottom: 14px;
+  }
+  .section-sub {
+    font-size: 16px;
+    color: var(--text-secondary);
+    max-width: 600px;
+    line-height: 1.55;
+  }
+  .section-head { margin-bottom: 40px; }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 22px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
+  }
+  .btn-primary {
+    background: var(--crimson);
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(229,9,50,0.32);
+  }
+  .btn-primary:hover {
+    background: var(--accent-glow);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(255,36,77,0.42);
+  }
+  .btn-ghost {
+    border: 1px solid var(--border-red);
+    color: #fff;
+    background: var(--bg-card);
+  }
+  .btn-ghost:hover { border-color: var(--crimson); transform: translateY(-2px); }
+
+  /* Cards & Grids */
+  .pillars-grid, .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+  }
+  .pillar-card, .service-card, .archive-card, .dev-card, .skill-group, .channel-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-red);
+    border-radius: 8px;
+    padding: 24px;
+    transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+  }
+  .pillar-card:hover, .service-card:hover, .archive-card:hover, .dev-card:hover, .skill-group:hover, .channel-card:hover {
+    border-color: var(--crimson);
+    transform: translateY(-3px);
+    box-shadow: 0 16px 36px rgba(229,9,50,0.14);
+  }
+  .pillar-index, .service-index {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--accent-glow);
+    margin-bottom: 12px;
+  }
+  .pillar-title, .service-title { font-size: 22px; font-weight: 800; margin-bottom: 6px; }
+  .pillar-subtitle { font-size: 13px; color: var(--text-secondary); margin-bottom: 12px; }
+  .pillar-list, .service-list { font-size: 14px; color: var(--text-secondary); line-height: 1.65; }
+  .pillar-cta { display: inline-block; margin-top: 16px; font-size: 13px; font-weight: 700; color: var(--accent-glow); }
+
+  /* About */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 36px;
+    align-items: start;
+  }
+  .about-text p { color: var(--text-secondary); line-height: 1.72; margin-bottom: 18px; font-size: 16px; }
+  .about-text strong { color: #fff; }
+  .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 24px; }
+  .about-stat {
+    background: var(--bg-card);
+    border: 1px solid var(--border-red);
+    padding: 18px;
+    border-radius: 6px;
+  }
+  .about-stat-value { font-size: 22px; font-weight: 800; color: #fff; }
+  .about-stat-label { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-secondary); margin-top: 4px; }
+  .focus-areas { display: grid; gap: 12px; }
+  .focus-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border-red);
+    padding: 16px 18px;
+    border-radius: 6px;
+  }
+  .focus-item-label { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--accent-glow); margin-bottom: 8px; }
+  .focus-item-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .focus-item-tags span {
+    font-size: 12.5px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    background: rgba(229,9,50,0.1);
+    border: 1px solid var(--border-red);
+  }
+
+  /* Work Archive & Filters */
+  .work-filters { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 28px; }
+  .filter-btn {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12.5px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: 1px solid var(--border-red);
+    background: var(--bg-card);
+    color: var(--text-secondary);
+    transition: all 0.2s;
+  }
+  .filter-btn[aria-pressed="true"], .filter-btn:hover {
+    background: var(--crimson);
+    border-color: var(--crimson);
+    color: #fff;
+  }
+
+  .projects-list { display: grid; gap: 24px; margin-bottom: 28px; }
+  .project {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: 28px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-red);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 22px;
+    align-items: center;
+  }
+  .project-visual {
+    aspect-ratio: 16/9;
+    background: linear-gradient(135deg, #2B0000, #0A0A0A);
+    border: 1px solid var(--border-red);
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .project-visual img { width: 100%; height: 100%; object-fit: cover; }
+  .project-visual-label { font-family: 'JetBrains Mono', monospace; font-size: 14px; color: var(--accent-glow); letter-spacing: 0.12em; }
+  .project-index { font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: var(--accent-glow); margin-bottom: 8px; }
+  .project-title { font-size: 24px; font-weight: 800; margin-bottom: 4px; }
+  .project-subtitle { font-size: 13px; color: var(--text-secondary); margin-bottom: 12px; }
+  .project-desc { font-size: 14.5px; line-height: 1.6; color: var(--text-secondary); margin-bottom: 14px; }
+  .project-tech { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 16px; }
+  .project-tech span {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    padding: 4px 9px;
+    border-radius: 3px;
+    background: rgba(229,9,50,0.12);
+    border: 1px solid var(--border-red);
+  }
+  .project-links { display: flex; gap: 14px; flex-wrap: wrap; }
+  .project-links a, .archive-card a {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--accent-glow);
+  }
+  .project-links a:hover, .archive-card a:hover { text-decoration: underline; }
+
+  .archive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+  }
+  .archive-card h4 { font-size: 18px; font-weight: 800; margin-bottom: 8px; }
+  .archive-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.58; margin-bottom: 14px; }
+
+  .dev-note { font-size: 13.5px; color: var(--text-secondary); line-height: 1.6; max-width: 780px; margin-bottom: 24px; }
+  .dev-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 18px;
+  }
+  .dev-card-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 10px; }
+  .dev-card-head h4 { font-size: 18px; font-weight: 800; }
+  .dev-card-subtitle { font-size: 12.5px; color: var(--text-secondary); margin-top: 2px; }
+  .status-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 3px;
+    border: 1px solid var(--crimson);
+    background: rgba(229,9,50,0.18);
+    color: var(--accent-glow);
+    white-space: nowrap;
+  }
+  .dev-card-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.55; margin-bottom: 12px; }
+  .dev-card-flow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11.5px;
+    line-height: 1.55;
+    color: rgba(255,255,255,0.85);
+    padding: 10px;
+    border-radius: 4px;
+    background: rgba(43,0,0,0.45);
+    border: 1px dashed var(--border-red);
+    margin-bottom: 14px;
+  }
+  .is-filtered-out { display: none !important; }
+
+  /* Skills */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 18px;
+  }
+  .skill-group-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11.5px;
+    color: var(--accent-glow);
+    letter-spacing: 0.12em;
+    margin-bottom: 12px;
+  }
+  .skill-group-items { display: flex; flex-wrap: wrap; gap: 8px; }
+  .skill-group-items span {
+    font-size: 13px;
+    padding: 5px 11px;
+    border-radius: 4px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border-red);
+  }
+
+  /* Experience Timeline & Certs */
+  .timeline {
+    display: grid;
+    gap: 18px;
+    border-left: 2px solid var(--crimson);
+    padding-left: 24px;
+    margin-bottom: 44px;
+  }
+  .timeline-item {
+    position: relative;
+    background: var(--bg-card);
+    border: 1px solid var(--border-red);
+    border-radius: 8px;
+    padding: 20px 22px;
+  }
+  .timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -32px; top: 24px;
+    width: 12px; height: 12px;
+    border-radius: 50%;
+    background: var(--crimson);
+    box-shadow: 0 0 12px var(--accent-glow);
+  }
+  .timeline-date { font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: var(--accent-glow); margin-bottom: 6px; }
+  .timeline-title { font-size: 19px; font-weight: 800; }
+  .timeline-org { font-size: 14px; color: #fff; opacity: 0.85; margin: 4px 0 8px; }
+  .timeline-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+  .timeline-desc ul { padding-left: 18px; }
+
+  .certs-block {
+    background: var(--bg-card);
+    border: 1px solid var(--border-red);
+    border-radius: 8px;
+    padding: 24px;
+  }
+  .certs-label { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--accent-glow); letter-spacing: 0.14em; margin-bottom: 14px; }
+  .certs-list { display: grid; gap: 10px; }
+  .cert-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed var(--border-red);
+    font-size: 14px;
+  }
+  .cert-item:last-child { border-bottom: 0; padding-bottom: 0; }
+  .cert-date { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-secondary); white-space: nowrap; }
+
+  /* Services CTA & Resume Strip */
+  .services-cta { margin-top: 28px; }
+  .resume-strip {
+    text-align: center;
+    background: radial-gradient(circle at center, rgba(138,3,3,0.35), var(--bg-main)) !important;
+  }
+  .resume-strip h2 { font-size: clamp(1.7rem, 3.2vw, 2.4rem); font-weight: 800; margin-bottom: 10px; }
+  .resume-strip p { color: var(--text-secondary); max-width: 540px; margin: 0 auto 24px; line-height: 1.6; }
+
+  /* Content Creation */
+  .channel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 18px;
+    margin-top: 28px;
+  }
+  .channel-tag { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--accent-glow); letter-spacing: 0.14em; }
+  .channel-card h3 { font-size: 22px; font-weight: 800; margin: 8px 0; }
+  .channel-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 14px; }
+  .channel-cta { font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: var(--accent-glow); font-weight: 600; }
+
+  /* Contact */
+  .contact-wrap {
+    max-width: 680px;
+    margin: 0 auto;
+    background: var(--bg-card);
+    border: 1px solid var(--border-red);
+    border-radius: 10px;
+    padding: 28px;
+  }
+  .contact-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 22px; }
+  .contact-tab {
+    padding: 11px;
+    border-radius: 4px;
+    border: 1px solid var(--border-red);
+    font-weight: 700;
+    font-size: 13.5px;
+    color: var(--text-secondary);
+    transition: all 0.2s;
+  }
+  .contact-tab[aria-selected="true"] {
+    background: var(--crimson);
+    border-color: var(--crimson);
+    color: #fff;
+  }
+  .contact-form { display: none; gap: 16px; }
+  .contact-form.active { display: grid; }
+  .form-row { display: grid; gap: 6px; }
+  .form-row label { font-size: 13px; font-weight: 600; color: #fff; }
+  .form-row input, .form-row textarea, .form-row select {
+    width: 100%;
+    padding: 11px 13px;
+    border-radius: 4px;
+    background: #0E0607;
+    border: 1px solid var(--border-red);
+    color: #fff;
+    font: inherit;
+    font-size: 14px;
+  }
+  .form-row input:focus, .form-row textarea:focus, .form-row select:focus {
+    outline: none;
+    border-color: var(--crimson);
+  }
+  .form-row textarea { min-height: 105px; resize: vertical; }
+  .form-error { font-size: 12px; color: var(--accent-glow); min-height: 14px; }
+  .form-note { font-size: 12px; color: var(--text-secondary); line-height: 1.5; }
+  .form-status { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #fff; }
+
+  .contact-direct {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-red);
+    font-size: 13.5px;
+    color: var(--text-secondary);
+  }
+  .contact-direct a:hover { color: var(--accent-glow); }
+
+  /* Footer */
+  .footer {
+    padding: 44px 0 32px;
+    background: #070404;
+  }
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border-red);
+  }
+  .footer-brand { font-weight: 800; font-size: 16px; letter-spacing: 0.14em; }
+  .footer-tagline { font-size: 13px; color: var(--text-secondary); margin-top: 4px; }
+  .footer-links { display: flex; gap: 18px; flex-wrap: wrap; font-size: 13.5px; color: var(--text-secondary); }
+  .footer-links a:hover { color: #fff; }
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-top: 18px;
+    font-size: 12.5px;
+    color: var(--text-secondary);
+  }
+
+  /* Scroll Reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.65s cubic-bezier(.2,.8,.2,1), transform 0.65s cubic-bezier(.2,.8,.2,1);
+  }
+  .reveal.in { opacity: 1; transform: none; }
+
+  /* =========================================================
+     4. MOBILE ART DIRECTION (<= 820px)
+     ========================================================= */
+  @media (max-width: 820px) {
+    .frame svg.wm, .frame .script, .frame .badge { display: none; }
+    .m-only { display: block; }
+
+    .tag { height: 30px; padding: 0 11px; font-size: 12px; }
+    .tag.t1 { left: 12px; top: 12px; }
+    .tag.t2 { right: 12px; left: auto; top: 12px; }
+    .tag.t3 { left: 12px; right: auto; top: 50px; }
+    .tag.t4 { right: 12px; top: 50px; }
+
+    body.is-case .tag.t3,
+    body.is-case .tag.t4 { visibility: hidden; }
+    body.is-case .center-logo { display: none; }
+
+    .m-wm {
+      position: absolute;
+      left: 3vw;
+      top: 94px;
+      width: 94vw;
+      pointer-events: none;
+    }
+    .m-wm text {
+      font-family: 'Inter Tight', sans-serif;
+      font-weight: 900;
+      font-size: 224px;
+      letter-spacing: -6px;
+      fill: url(#mWmGrad);
+    }
+    .m-script {
+      position: absolute;
+      left: 4vw;
+      top: calc(94px + 13vw);
+      font-family: 'Caveat Brush', cursive;
+      font-size: 8.6vw;
+      color: #fff;
+      transform: rotate(-6deg);
+      text-shadow: 0 2px 12px rgba(229,9,50,0.45);
+      pointer-events: none;
+    }
+    .m-badge {
+      position: absolute;
+      right: 3vw;
+      top: calc(88px + 7vw);
+      width: 30vw;
+      height: calc(30vw * 760 / 410);
+      pointer-events: none;
+      z-index: 2;
+    }
+    .m-badge .badge {
+      display: block !important;
+      left: 0; top: 0;
+      transform: scale(var(--mbs));
+      transform-origin: 0 0;
+    }
+    body.is-case .m-wm,
+    body.is-case .m-script,
+    body.is-case .m-badge { display: none; }
+
+    .case-filters {
+      left: 50%;
+      transform: translateX(-50%);
+      top: 52px;
+      max-width: 94vw;
+      justify-content: center;
+    }
+    .case-filter-pill { font-size: 10px; padding: 4px 8px; }
+
+    .ticket {
+      left: 50%; right: auto;
+      transform: translateX(-50%);
+      top: 86px;
+      width: min(88vw, 370px);
+      min-height: 0;
+      padding: 18px 22px 16px 28px;
+    }
+    .hole { width: 14px; height: 14px; }
+    .ticket h2 { font-size: 30px; }
+    .ticket-row { font-size: 10.5px; }
+    .ticket-link { font-size: 10.5px; padding: 5px 9px; }
+
+    .case-desc {
+      left: 50%;
+      transform: translateX(-50%);
+      top: calc(86px + var(--th) + 14px);
+      width: min(88vw, 370px);
+      text-align: center;
+    }
+    .case-desc .k { font-size: 13px; }
+    .case-desc p { font-size: 12.5px; margin-top: 6px; }
+    .case-desc .num { display: none; }
+
+    .nav-case { bottom: max(18px, env(safe-area-inset-bottom)); }
+    .nav-case.prev { left: 5vw; }
+    .nav-case.next { right: 5vw; }
+    .nav-case .c { width: 42px; height: 42px; }
+    .nav-case svg { width: 18px; height: 18px; }
+    .nav-case span { font-size: 12px; }
+    .nav-case span br { display: none; }
+
+    .case-bottom-bar { bottom: max(22px, env(safe-area-inset-bottom)); }
+    .pill-btn { font-size: 10px; padding: 8px 12px; }
+
+    .project { grid-template-columns: 1fr; }
+    .about-grid { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+    .scr-mock-grid { grid-template-columns: 1fr; }
+    .scr-mock-title { font-size: 20px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation: none !important;
+      transition: none !important;
+    }
+    .reveal { opacity: 1; transform: none; }
+  }
+
+  /* Hero typography: keep the complete name visible and keep the tagline
+     clear of the 9:16 portrait video. */
+  .frame > svg.wm {
+    left: 22px;
+    top: 24px;
+    width: 540px;
+    height: 220px;
+    z-index: 3;
+    overflow: visible;
+  }
+  .frame > svg.wm text {
+    font-size: 190px;
+    letter-spacing: -7px;
+  }
+  .frame > .script {
+    left: 42px;
+    top: 188px;
+    width: 470px;
+    max-width: 470px;
+    font-size: 54px;
+    line-height: .92;
+    white-space: normal;
+    transform: rotate(-5deg);
+    z-index: 6;
+  }
+
+</style>
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body id="top" class="stage-locked">
+<a href="#dossier" class="skip-link">Skip to full portfolio</a>
+
+<!-- =========================================================
+     INTERACTIVE HERO + LAPTOP DIVE STAGE
+     ========================================================= -->
+<div class="stage" id="stage" aria-label="Cinematic Interactive Portfolio Stage">
+  <div class="studio-beams" aria-hidden="true"></div>
+
+
+  <div class="frame d-fade" id="frame">
+    <div class="hero-floor-glow" aria-hidden="true"></div>
+
+    <!-- Giant Background Wordmark -->
+    <svg class="wm pre" id="wm" viewBox="0 0 540 220" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="wmGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#FFFFFF" stop-opacity="1"/>
+          <stop offset="0.55" stop-color="#E8DDE0" stop-opacity="0.88"/>
+          <stop offset="1" stop-color="#E50932" stop-opacity="0.24"/>
+        </linearGradient>
+      </defs>
+      <text x="12" y="178" textLength="500" lengthAdjust="spacingAndGlyphs">BARATH M</text>
+    </svg>
+
+    <!-- Barath portrait video — 9:16; the small ID-card photo remains unchanged -->
+    <div class="hero-plate-wrap" id="heroPlate">
+      <video class="hero-plate-video" src="assets/barath-hero.mp4" autoplay muted loop playsinline preload="auto" aria-label="Barath M portrait video"></video>
+    </div>
+
+    <!-- Handwritten Tagline -->
+    <div class="script pre" id="scriptText">build · fix · engineer<br>technology</div>
+
+    <!-- Hanging Lanyard Identity Badge -->
+    <div class="badge pre" id="badge">
+      <div class="badge-strap"></div>
+      <div class="badge-clip"></div>
+      <div class="badge-sleeve">
+        <div class="badge-card">
+          <div class="badge-head">
+            <h4>TECH<br><span>SPECIALIST</span><br>CARD</h4>
+            <span class="badge-yr">2026</span>
+          </div>
+          <div class="badge-role">SOFTWARE DEVELOPER &amp; TECHNOLOGY SPECIALIST</div>
+          <div class="badge-photo">
+            <span class="badge-photo-fallback">BM</span>
+            <img src="assets/barath-hero.png" alt="Barath M ID Portrait" onerror="this.style.display='none'">
+          </div>
+          <div class="badge-rows">
+            <div class="badge-row"><span>NAME</span><b>BARATH M</b></div>
+            <div class="badge-row"><span>FOCUS</span><b>SOFTWARE · AI/ML · CLOUD · IT</b></div>
+            <div class="badge-row"><span>ORG</span><b>DR. N.G.P. ARTS &amp; SCIENCE</b></div>
+            <div class="badge-row"><span>EMAIL</span><b>mbarath2121@gmail.com</b></div>
+            <div class="badge-row"><span>PHONE</span><b>+91 9789223360</b></div>
+            <div class="badge-row"><span>LOC</span><b>COIMBATORE, TN, INDIA</b></div>
+          </div>
+        </div>
+      </div>
+      <div class="badge-hit" id="badgeHit" aria-label="Hover to swing ID badge"></div>
+    </div>
+
+    <div class="dive-backdrop" id="diveBackdrop" aria-hidden="true"></div>
+
+    <!-- Floating 3D Laptop Rig (Dive Target) -->
+    <div class="laptop-rig" id="laptopRig">
+      <div class="laptop-lid">
+        <div class="laptop-bezel">
+          <div class="laptop-cam"></div>
+          <div class="screen" id="screen">
+            <div class="flash" id="screenFlash"></div>
+            <!-- Case views injected dynamically by JS from authoritative data -->
+            <div id="screenCasesMount"></div>
+          </div>
+        </div>
+      </div>
+      <div class="laptop-base"></div>
+    </div>
+
+    <div class="screen-hit" id="screenHit" title="Click for next case"></div>
+  </div>
+
+  <!-- VIEWPORT-PINNED UI OVERLAY -->
+  <div class="ui" id="stageUi">
+    <button class="tag t1 pre" id="btnStudio" type="button">MY STUDIO</button>
+    <button class="tag t2 pre" id="btnPortfolio" type="button">PORTFOLIO</button>
+    <a class="tag t3 pre" id="btnContacts" href="#contact">CONTACTS</a>
+    <a class="tag t4 pre" id="btnDiscuss" href="#contact">DISCUSS A PROJECT</a>
+
+    <button class="center-logo" id="btnCenterLogo" type="button">BARATH M</button>
+
+    <!-- Mobile Hero Copies -->
+    <svg class="m-only m-wm pre" viewBox="0 0 1440 240" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="mWmGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#FFFFFF" stop-opacity="1"/>
+          <stop offset="1" stop-color="#E50932" stop-opacity="0.28"/>
+        </linearGradient>
+      </defs>
+      <text x="10" y="205" textLength="1420" lengthAdjust="spacingAndGlyphs">BARATH M</text>
+    </svg>
+    <div class="m-only m-script pre">build · fix · engineer technology</div>
+    <div class="m-only m-badge pre" id="mobileBadgeSlot"></div>
+
+    <!-- Case Mode Category Filters -->
+    <div class="case-filters" id="caseFilters" role="group" aria-label="Filter laptop showcase cases">
+      <button class="case-filter-pill" data-cat="all" aria-pressed="true">ALL (10)</button>
+      <button class="case-filter-pill" data-cat="software" aria-pressed="false">SOFTWARE</button>
+      <button class="case-filter-pill" data-cat="ai" aria-pressed="false">AI / ML</button>
+      <button class="case-filter-pill" data-cat="cloud" aria-pressed="false">CLOUD</button>
+      <button class="case-filter-pill" data-cat="dev" aria-pressed="false">IN DEV</button>
+    </div>
+
+    <!-- Punched Paper Ticket Card -->
+    <aside class="ticket" id="ticket" aria-live="polite">
+      <span class="hole tl"></span><span class="hole tr"></span>
+      <span class="hole bl"></span><span class="hole br"></span>
+      <h2 id="tTitle">SMART CAMPUS SAFETY</h2>
+      <div class="ticket-rows" id="tRows"></div>
+      <div class="ticket-links" id="tLinks"></div>
+      <div class="ticket-360-video-wrap">
+        <video class="ticket-360-video" src="assets/barath-360.mp4" autoplay muted loop playsinline preload="auto" aria-label="Barath M 360 degree rotating video"></video>
+      </div>
+    </aside>
+
+    <!-- Left Case Description -->
+    <div class="case-desc" id="caseDesc">
+      <div class="k" id="cKey">// smart campus safety</div>
+      <p id="cText"></p>
+      <div class="num" id="cNum">01 / 10</div>
+    </div>
+
+    <!-- Circular Prev / Next Case Buttons -->
+    <button class="nav-case prev" id="btnPrevCase" type="button" aria-label="Previous case">
+      <span class="c"><svg viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></span>
+      <span>previous <br>case</span>
+    </button>
+    <button class="nav-case next" id="btnNextCase" type="button" aria-label="Next case">
+      <span class="c"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      <span>next <br>case</span>
+    </button>
+
+    <!-- Bottom Dossier Access in Case Mode -->
+    <div class="case-bottom-bar">
+      <button class="pill-btn" id="btnOpenDossierFromCase" type="button">FULL PORTFOLIO &amp; RESUME ↓</button>
+    </div>
+
+    <!-- Hero Scroll Hint -->
+    <div class="scroll-hint pre" id="scrollHint">
+      <span class="scroll-line"></span>
+      <span>scroll into the laptop</span>
+      <div class="hint-actions">
+        <button class="dossier-jump" id="btnOpenDossierFromHero" type="button">or jump to full dossier ↓</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- =========================================================
+     FULL PORTFOLIO DOSSIER (All Original Sections & Functionality)
+     ========================================================= -->
+<div class="dossier" id="dossier">
+  <nav class="dossier-nav" aria-label="Portfolio sections navigation">
+    <div class="container">
+      <a href="#top" class="nav-logo" id="navBackTop">BARATH <span>M</span></a>
+      <ul class="nav-links">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#content">Content</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-right-actions">
+        <button class="nav-dive-btn" id="btnBackToStage" type="button">Laptop Stage ↑</button>
+        <a href="Barath_M_Resume.pdf" target="_blank" rel="noopener noreferrer" class="nav-resume">Resume ↗</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <!-- WHAT I DO -->
+    <section id="what-i-do">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">WHAT I DO</div>
+          <h2 class="section-heading">Software and hardware,<br>one practice.</h2>
+          <p class="section-sub">I work across software and hardware to build, deploy and solve real-world technology problems.</p>
+        </div>
+
+        <div class="pillars-grid reveal">
+          <div class="pillar-card">
+            <div class="pillar-index">01</div>
+            <h3 class="pillar-title">Build</h3>
+            <div class="pillar-subtitle">Software &amp; Applications</div>
+            <div class="pillar-list">Android · Web · Software Systems · Mobile Apps · APIs</div>
+            <a href="#work" class="pillar-cta">Explore →</a>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-index">02</div>
+            <h3 class="pillar-title">Intelligence</h3>
+            <div class="pillar-subtitle">AI &amp; Machine Learning</div>
+            <div class="pillar-list">AI · Machine Learning · Computer Vision · NLP</div>
+            <a href="#work" class="pillar-cta">Explore →</a>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-index">03</div>
+            <h3 class="pillar-title">Systems</h3>
+            <div class="pillar-subtitle">Cloud &amp; Infrastructure</div>
+            <div class="pillar-list">Firebase · AWS · APIs · Databases</div>
+            <a href="#work" class="pillar-cta">Explore →</a>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-index">04</div>
+            <h3 class="pillar-title">Support</h3>
+            <div class="pillar-subtitle">IT &amp; Hardware</div>
+            <div class="pillar-list">PC &amp; Laptop Service · Printer Service · Hardware Diagnostics · Windows Troubleshooting</div>
+            <a href="#services" class="pillar-cta">Explore →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">ABOUT</div>
+          <h2 class="section-heading">I like turning ideas<br>into working technology.</h2>
+        </div>
+
+        <div class="about-grid reveal">
+          <div class="about-text">
+            <p>I'm Barath, a Computer Science student <strong>(B.Sc, Cognitive Systems, 2023–2026)</strong> now working as a <strong>Junior Lab Technician</strong> in the Computer Science department at Dr. NGP Educational Institutions, managing IT assets and lab equipment across labs and departments.</p>
+            <p>I enjoy both <strong>building software</strong> and <strong>solving real-world technical problems</strong> — I've worked hands-on in billing operations and technical support, and in software/OS installation and troubleshooting, alongside building applications across web, cloud and AI.</p>
+            <div class="about-stats">
+              <div class="about-stat">
+                <div class="about-stat-value">B.Sc CS</div>
+                <div class="about-stat-label">EDUCATION — COGNITIVE SYSTEMS</div>
+              </div>
+              <div class="about-stat">
+                <div class="about-stat-value">Software + Tech</div>
+                <div class="about-stat-label">FOCUS</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="focus-areas">
+            <div class="focus-item">
+              <div class="focus-item-label">BUILD</div>
+              <div class="focus-item-tags"><span>Software</span><span>Android</span><span>Web</span></div>
+            </div>
+            <div class="focus-item">
+              <div class="focus-item-label">INTELLIGENCE</div>
+              <div class="focus-item-tags"><span>AI</span><span>ML</span><span>Computer Vision</span></div>
+            </div>
+            <div class="focus-item">
+              <div class="focus-item-label">SYSTEMS</div>
+              <div class="focus-item-tags"><span>Cloud</span><span>Backend</span><span>APIs</span></div>
+            </div>
+            <div class="focus-item">
+              <div class="focus-item-label">SUPPORT</div>
+              <div class="focus-item-tags"><span>PC</span><span>Laptop</span><span>Printer</span><span>Hardware</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- FEATURED & ARCHIVE WORK -->
+    <section id="work">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">FEATURED WORK</div>
+          <h2 class="section-heading">Real applications,<br>real systems.</h2>
+          <p class="section-sub">Projects I've designed and built across mobile, cloud and AI.</p>
+        </div>
+
+        <div class="work-filters reveal" role="group" aria-label="Filter projects by category">
+          <button class="filter-btn" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-btn" data-filter="software" aria-pressed="false">Software</button>
+          <button class="filter-btn" data-filter="ai" aria-pressed="false">AI / ML</button>
+          <button class="filter-btn" data-filter="cloud" aria-pressed="false">Cloud</button>
+        </div>
+
+        <div class="projects-list">
+          <article class="project reveal" data-category="software ai cloud">
+            <div class="project-visual"><img src="campusiq-dashboard.png" width="1600" height="900" alt="CampusIQ dashboard showing real-time sensor monitoring — temperature, humidity, occupancy, gas level, light level and system health" loading="lazy"></div>
+            <div class="project-body">
+              <div class="project-index">01 / MOBILE + CLOUD + IoT</div>
+              <h3 class="project-title">Smart Campus Safety System</h3>
+              <div class="project-subtitle">Campus safety &amp; threat detection</div>
+              <p class="project-desc">AI-powered safety system for campus using cognitive computing and IoT sensors for real-time threat detection and emergency response, with Android notifications.</p>
+              <div class="project-tech"><span>Kotlin</span><span>Firebase</span><span>AWS</span><span>IoT</span></div>
+              <div class="project-links">
+                <a href="https://github.com/BARATH2121" target="_blank" rel="noopener noreferrer">GitHub →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-category="software ai cloud">
+            <div class="project-visual"><span class="project-visual-label">React · Gemini AI · Maps</span></div>
+            <div class="project-body">
+              <div class="project-index">02 / WEB + AI + CLOUD</div>
+              <h3 class="project-title">Travel Companion App</h3>
+              <div class="project-subtitle">AI-assisted trip planning</div>
+              <p class="project-desc">Intelligent travel planning application with a Gemini-powered AI chatbot, live location services and Google Maps integration, plus SOS features for safer journeys.</p>
+              <div class="project-tech"><span>React</span><span>Google Maps</span><span>Gemini AI</span><span>Firebase</span></div>
+              <div class="project-links">
+                <a href="https://github.com/BARATH2121" target="_blank" rel="noopener noreferrer">GitHub →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-category="software ai cloud">
+            <div class="project-visual">
+              <a href="https://famsystem.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Open Face Recognition Attendance live demo">
+                <img src="face-attendance-app.png" width="1202" height="731" alt="Face Attendance System app screen showing Mark Attendance, Register Face, My Attendance and Admin View options" loading="lazy">
+              </a>
+            </div>
+            <div class="project-body">
+              <div class="project-index">03 / AI + CLOUD</div>
+              <h3 class="project-title">Face Recognition Attendance</h3>
+              <div class="project-subtitle">Automated attendance via computer vision</div>
+              <p class="project-desc">Automated attendance system using AWS Rekognition for facial recognition, with cloud processing and DynamoDB for secure, efficient record storage.</p>
+              <div class="project-tech"><span>AWS Rekognition</span><span>Python</span><span>DynamoDB</span></div>
+              <div class="project-links">
+                <a href="https://github.com/BARATH2121" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                <a href="https://famsystem.vercel.app/" target="_blank" rel="noopener noreferrer">Live Demo →</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="archive-grid reveal">
+          <div class="archive-card" data-category="ai software">
+            <div class="project-visual" style="margin:-24px -24px 16px; border-radius:8px 8px 0 0; border-bottom:none;"><img src="assets/voice-assistant-app.png" width="1200" height="730" alt="Voice Assistant Application screen showing Start Listening, Command History, IoT Devices and Voice Settings options" loading="lazy"></div>
+            <h4>Voice Assistant Application</h4>
+            <p>Voice recognition system with NLP-based command processing, exploring integration with IoT devices for automation.</p>
+            <div class="project-tech"><span>Python</span><span>NLP</span></div>
+            <a href="https://github.com/BARATH2121" target="_blank" rel="noopener noreferrer">GitHub →</a>
+          </div>
+          <div class="archive-card" data-category="software cloud">
+            <div class="project-visual" style="margin:-24px -24px 16px; border-radius:8px 8px 0 0; border-bottom:none;"><img src="assets/expense-tracker-app.png" width="1200" height="730" alt="Expense Tracker app screen showing Add Expense, Sync Firebase, View Analytics and Export Report options" loading="lazy"></div>
+            <h4>Expense Tracker</h4>
+            <p>Cross-platform expense management app with real-time Firebase sync, offline capability and an analytics dashboard.</p>
+            <div class="project-tech"><span>Flutter</span><span>Firebase</span></div>
+            <a href="https://github.com/BARATH2121" target="_blank" rel="noopener noreferrer">GitHub →</a>
+          </div>
+          <div class="archive-card" data-category="software">
+            <div class="project-visual" style="margin:-24px -24px 16px; border-radius:8px 8px 0 0; border-bottom:none;"><img src="assets/healthcare-docrx-app.png" width="1200" height="730" alt="DocRX healthcare app screen showing Book Appointment, Prescriptions, Patient Records and Reminders options" loading="lazy"></div>
+            <h4>Healthcare Application (DocRX)</h4>
+            <p>Healthcare app concept covering appointment booking, prescription management and patient records.</p>
+            <div class="project-tech"><span>Android Studio</span></div>
+            <a href="https://github.com/BARATH2121" target="_blank" rel="noopener noreferrer">GitHub →</a>
+          </div>
+        </div>
+
+        <div class="section-head reveal" style="margin-top:64px; margin-bottom:14px;">
+          <div class="eyebrow">IN DEVELOPMENT</div>
+          <h3 class="section-heading" style="font-size:clamp(1.5rem, 3vw, 2rem);">Also building.</h3>
+        </div>
+        <p class="dev-note reveal">Projects actively in development. Everything below is clearly labeled by its project stage — the lists describe the planned design and architecture rather than finished features, and no GitHub or demo links are shown because none exist yet.</p>
+
+        <div class="dev-grid reveal">
+          <div class="dev-card" data-category="software cloud">
+            <div class="project-visual" style="margin:-24px -24px 16px; border-radius:8px 8px 0 0; border-bottom:none;"><img src="assets/nexgig-app.png" width="1200" height="730" alt="NexGig concept screen showing Find Gigs Nearby, Post a Gig, My Earnings and Notifications options" loading="lazy"></div>
+            <div class="dev-card-head">
+              <div>
+                <h4>NexGig</h4>
+                <div class="dev-card-subtitle">Student Gig Marketplace</div>
+              </div>
+              <span class="status-badge">IN DEVELOPMENT</span>
+            </div>
+            <p class="dev-card-desc">A mobile platform designed to connect students with short-term gig work — students discovering gigs, clients posting them, with location-aware discovery.</p>
+            <div class="dev-card-flow">Concept: student/client profiles · location-based gig discovery · earnings tracking · notifications · maps · auth · real-time data</div>
+            <div class="project-tech"><span>Kotlin</span><span>Jetpack Compose</span><span>Firebase</span><span>Google Maps</span></div>
+          </div>
+
+          <div class="dev-card" data-category="software ai">
+            <div class="project-visual" style="margin:-24px -24px 16px; border-radius:8px 8px 0 0; border-bottom:none;"><img src="assets/moodmusic-app.png" width="1200" height="730" alt="MoodMusic concept screen showing Scan My Mood, Mood Playlists, Local Library and Connect Spotify options" loading="lazy"></div>
+            <div class="dev-card-head">
+              <div>
+                <h4>MoodMusic</h4>
+                <div class="dev-card-subtitle">Emotion-Based Music App</div>
+              </div>
+              <span class="status-badge">IN DEVELOPMENT</span>
+            </div>
+            <p class="dev-card-desc">An Android app combining facial emotion analysis with music playback, including local music support.</p>
+            <div class="dev-card-flow">Camera → Face Detection → Emotion Analysis → Mood Classification → Playback</div>
+            <div class="project-tech"><span>Kotlin</span><span>Jetpack Compose</span><span>CameraX</span><span>ML Kit</span><span>Spotify</span></div>
+          </div>
+
+          <div class="dev-card" data-category="software ai">
+            <div class="project-visual" style="margin:-24px -24px 16px; border-radius:8px 8px 0 0; border-bottom:none;"><img src="assets/offline-voice-auth-app.png" width="1200" height="730" alt="Offline Voice Assistant concept screen showing Authenticate Voice, Offline Commands, Voiceprint Setup and No Cloud Mode options" loading="lazy"></div>
+            <div class="dev-card-head">
+              <div>
+                <h4>Offline Voice Assistant</h4>
+                <div class="dev-card-subtitle">Local Speech &amp; Voice Authentication</div>
+              </div>
+              <span class="status-badge">IN DEVELOPMENT</span>
+            </div>
+            <p class="dev-card-desc">An Android voice assistant focused on local speech recognition and voiceprint-based authentication — no cloud processing.</p>
+            <div class="dev-card-flow">Voice Input → Offline Speech Recognition → Voice Authentication → Command Processing</div>
+            <div class="project-tech"><span>Kotlin</span><span>Vosk</span><span>TarsosDSP</span><span>MFCC</span></div>
+          </div>
+
+          <div class="dev-card" data-category="software">
+            <div class="project-visual" style="margin:-24px -24px 16px; border-radius:8px 8px 0 0; border-bottom:none;"><img src="assets/hardware-scanner-app.png" width="1200" height="730" alt="Hardware Inventory Scanner concept screen showing Scan QR / Barcode, OCR Serial Scan, View Inventory and Export Asset List options" loading="lazy"></div>
+            <div class="dev-card-head">
+              <div>
+                <h4>Hardware Inventory Scanner</h4>
+                <div class="dev-card-subtitle">Asset Management &amp; Device Scanning</div>
+              </div>
+              <span class="status-badge">IN DEVELOPMENT</span>
+            </div>
+            <p class="dev-card-desc">An Android app concept for inventorying computer hardware — PCs, monitors, mice, keyboards, printers — via QR/barcode scanning or OCR.</p>
+            <div class="dev-card-flow">QR/Barcode: Scan → Device ID → Inventory Record<br>No code: Camera → OCR → Text Detection → Serial Extraction → Inventory Record</div>
+            <div class="project-tech"><span>Android</span><span>OCR</span><span>QR/Barcode Scanning</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">SKILLS</div>
+          <h2 class="section-heading">Tools I actually use.</h2>
+        </div>
+
+        <div class="skills-grid reveal">
+          <div class="skill-group">
+            <div class="skill-group-label">SOFTWARE / MOBILE</div>
+            <div class="skill-group-items"><span>Java</span><span>Kotlin</span><span>Android Studio</span><span>React Native</span><span>Flutter</span></div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-label">AI / DATA</div>
+            <div class="skill-group-items"><span>Python</span><span>AWS Rekognition</span><span>Gemini AI</span><span>NLP</span><span>Cognitive Systems</span></div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-label">CLOUD / BACKEND</div>
+            <div class="skill-group-items"><span>AWS</span><span>Azure</span><span>Firebase</span><span>IoT Core</span><span>DynamoDB</span><span>Node.js</span><span>MongoDB</span><span>REST APIs</span></div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-label">WEB</div>
+            <div class="skill-group-items"><span>React</span><span>JavaScript</span><span>HTML</span><span>CSS</span></div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-label">IT / HARDWARE</div>
+            <div class="skill-group-items"><span>OS Installation (Windows/Linux)</span><span>System Config &amp; Maintenance</span><span>Hardware/Software Troubleshooting</span><span>IT Asset Management</span></div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-label">TOOLS &amp; TESTING</div>
+            <div class="skill-group-items"><span>Git</span><span>GitHub</span><span>VS Code</span><span>UI Path</span><span>Selenium</span><span>Wireshark</span><span>Canva</span><span>Microsoft Office</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE & CERTIFICATIONS -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">EXPERIENCE</div>
+          <h2 class="section-heading">Education &amp; work.</h2>
+        </div>
+
+        <div class="timeline reveal">
+          <div class="timeline-item">
+            <div class="timeline-date">JUNE 2026 — PRESENT</div>
+            <div class="timeline-title">Junior Lab Technician</div>
+            <div class="timeline-org">Dr. NGP Educational Institutions · Department of Computer Science</div>
+            <div class="timeline-desc">Managing IT assets and lab equipment across multiple labs and departments.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2024 — JUL 2026</div>
+            <div class="timeline-title">Billing Expert</div>
+            <div class="timeline-org">D Mart · Coimbatore</div>
+            <div class="timeline-desc">
+              <ul>
+                <li>Handled billing operations with accuracy and efficiency using POS systems.</li>
+                <li>Assisted clients with technical support and troubleshooting hardware/software issues.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2022 — 2024</div>
+            <div class="timeline-title">Software and OS Installation</div>
+            <div class="timeline-org">Orange Computer Sales &amp; Service · Coimbatore</div>
+            <div class="timeline-desc">Installed and configured various operating systems and software packages.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">INTERNSHIP · 15 DAYS</div>
+            <div class="timeline-title">Cloud Technology</div>
+            <div class="timeline-org">Nobal Technology</div>
+            <div class="timeline-desc">Short-form internship focused on cloud technology fundamentals.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2023 — 2026</div>
+            <div class="timeline-title">B.Sc Computer Science with Cognitive Systems</div>
+            <div class="timeline-org">Dr. N.G.P. Arts and Science College</div>
+            <div class="timeline-desc">69.23% (till 6th semester).</div>
+          </div>
+        </div>
+
+        <div class="certs-block reveal">
+          <div class="certs-label">CERTIFICATIONS</div>
+          <div class="certs-list">
+            <div class="cert-item"><span><strong>Infosys Springboard</strong> — Information Security</span><span class="cert-date">Jul 2025</span></div>
+            <div class="cert-item"><span><strong>Infosys Springboard</strong> — Intro to Cyber Security</span><span class="cert-date">Jun 2025</span></div>
+            <div class="cert-item"><span><strong>Infosys Springboard</strong> — Cloud and Virtualization</span><span class="cert-date">Feb 2025</span></div>
+            <div class="cert-item"><span>Published <strong>Cloud and Virtualization Book</strong></span><span class="cert-date">Jan 2025</span></div>
+            <div class="cert-item"><span><strong>Infosys Springboard</strong> — Operational Research</span><span class="cert-date">Sep 2024</span></div>
+            <div class="cert-item"><span><strong>PROMPT Infotech</strong> — Threat Analysis using Wireshark</span><span class="cert-date">Jul 2024</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECH SERVICES -->
+    <section id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">TECH SUPPORT &amp; SERVICES</div>
+          <h2 class="section-heading">Practical support for<br>everyday tech problems.</h2>
+          <p class="section-sub">Hands-on hardware and software support, alongside the development work.</p>
+        </div>
+
+        <div class="services-grid reveal">
+          <div class="service-card">
+            <div class="service-index">01</div>
+            <h3 class="service-title">PC &amp; Laptop Service</h3>
+            <div class="service-list">Hardware diagnostics<br>Windows/Linux installation &amp; configuration<br>Performance troubleshooting</div>
+          </div>
+          <div class="service-card">
+            <div class="service-index">02</div>
+            <h3 class="service-title">Software &amp; OS Installation</h3>
+            <div class="service-list">Operating system installation<br>Software package installation<br>System configuration &amp; maintenance</div>
+          </div>
+          <div class="service-card">
+            <div class="service-index">03</div>
+            <h3 class="service-title">IT Support</h3>
+            <div class="service-list">Device setup &amp; troubleshooting<br>IT asset management<br>General technical assistance</div>
+          </div>
+        </div>
+
+        <div class="services-cta reveal">
+          <a href="#contact" class="btn btn-primary" id="servicesContactBtn">Need Technical Help? →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESUME CTA -->
+    <section class="resume-strip">
+      <div class="container">
+        <h2 class="reveal">Looking for the full story?</h2>
+        <p class="reveal">Download my resume for a complete overview of my education, experience, technical skills and projects.</p>
+        <div class="reveal"><a href="Barath_M_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Download Resume ↗</a></div>
+      </div>
+    </section>
+
+    <!-- CONTENT -->
+    <section id="content">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">CONTENT</div>
+          <h2 class="section-heading">Beyond the code.</h2>
+          <p class="section-sub">I also run two Instagram channels where I share what I'm learning and building.</p>
+        </div>
+
+        <div class="channel-grid reveal">
+          <a class="channel-card" href="https://www.instagram.com/techytotss" target="_blank" rel="noopener noreferrer">
+            <span class="channel-tag">INSTAGRAM</span>
+            <h3>@techytotss</h3>
+            <p>A kids-focused channel covering computer-related topics.</p>
+            <span class="channel-cta">Follow on Instagram ↗</span>
+          </a>
+
+          <a class="channel-card" href="https://www.instagram.com/aathiya_universe" target="_blank" rel="noopener noreferrer">
+            <span class="channel-tag">INSTAGRAM</span>
+            <h3>@aathiya_universe</h3>
+            <p>An entertainment-focused Instagram channel.</p>
+            <span class="channel-cta">Follow on Instagram ↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-head reveal" style="text-align:center; margin-left:auto; margin-right:auto;">
+          <div class="eyebrow">CONTACT</div>
+          <h2 class="section-heading">Let's build something.</h2>
+          <p class="section-sub" style="margin:0 auto;">Have a project idea, software opportunity or technical problem? Let's talk.</p>
+        </div>
+
+        <div class="contact-wrap reveal">
+          <div class="contact-tabs" role="tablist" aria-label="Contact type">
+            <button class="contact-tab" role="tab" id="tab-project" aria-selected="true" aria-controls="form-project" data-target="form-project" type="button">Software / Project</button>
+            <button class="contact-tab" role="tab" id="tab-support" aria-selected="false" aria-controls="form-support" data-target="form-support" type="button">Tech Support</button>
+          </div>
+
+          <form class="contact-form active" id="form-project" role="tabpanel" aria-labelledby="tab-project" novalidate>
+            <div class="form-row">
+              <label for="p-name">Name</label>
+              <input type="text" id="p-name" name="name" required>
+              <div class="form-error" id="err-p-name"></div>
+            </div>
+            <div class="form-row">
+              <label for="p-email">Email</label>
+              <input type="email" id="p-email" name="email" required>
+              <div class="form-error" id="err-p-email"></div>
+            </div>
+            <div class="form-row">
+              <label for="p-opportunity">Project / Opportunity</label>
+              <input type="text" id="p-opportunity" name="opportunity">
+            </div>
+            <div class="form-row">
+              <label for="p-message">Message</label>
+              <textarea id="p-message" name="message" required></textarea>
+              <div class="form-error" id="err-p-message"></div>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message →</button>
+            <p class="form-note">This opens your email app with the message pre-filled to mbarath2121@gmail.com — there's no server behind this form, so nothing is sent until you hit send there.</p>
+            <div class="form-status" id="status-project"></div>
+          </form>
+
+          <form class="contact-form" id="form-support" role="tabpanel" aria-labelledby="tab-support" novalidate>
+            <div class="form-row">
+              <label for="s-name">Name</label>
+              <input type="text" id="s-name" name="name" required>
+              <div class="form-error" id="err-s-name"></div>
+            </div>
+            <div class="form-row">
+              <label for="s-contact">Email or Phone</label>
+              <input type="text" id="s-contact" name="contact" required>
+              <div class="form-error" id="err-s-contact"></div>
+            </div>
+            <div class="form-row">
+              <label for="s-device">Device Type</label>
+              <select id="s-device" name="device">
+                <option>PC</option>
+                <option>Laptop</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="s-issue">Issue Description</label>
+              <textarea id="s-issue" name="issue" required></textarea>
+              <div class="form-error" id="err-s-issue"></div>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Request →</button>
+            <p class="form-note">This opens your email app with the request pre-filled to mbarath2121@gmail.com — there's no server behind this form, so nothing is sent until you hit send there.</p>
+            <div class="form-status" id="status-support"></div>
+          </form>
+
+          <div class="contact-direct">
+            <a href="mailto:mbarath2121@gmail.com">mbarath2121@gmail.com</a>
+            <a href="tel:+919789223360">+91 9789223360</a>
+            <a href="https://github.com/BARATH2121" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/barath-m-7044502a3" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <span>Coimbatore, Tamil Nadu, India</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand">BARATH M</div>
+          <div class="footer-tagline">Software · AI · Cloud · IT Support · Hardware</div>
+        </div>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="#work">Work</a>
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="footer-links">
+          <a href="https://github.com/BARATH2121" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/barath-m-7044502a3" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="mailto:mbarath2121@gmail.com">Email</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Barath M</span>
+        <span>Coimbatore, Tamil Nadu, India</span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script>
+(() => {
+  'use strict';
+  const RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* =========================================================
+     AUTHORITATIVE CASE DATA (All 10 Real Projects)
+     ========================================================= */
+  const CASES = [
+    {
+      id: 'campus-safety',
+      cats: ['software', 'ai', 'cloud'],
+      ticketTitle: 'SMART CAMPUS SAFETY',
+      rows: [['CATEGORY', 'MOBILE + CLOUD + IoT'], ['STACK', 'KOTLIN / FIREBASE / AWS'], ['STATUS', 'FEATURED PROJECT']],
+      key: '// 01 · smart campus safety',
+      text: 'AI-powered safety system for campus using cognitive computing and IoT sensors for real-time threat detection and emergency response, with Android notifications.',
+      tech: ['Kotlin', 'Firebase', 'AWS', 'IoT'],
+      image: 'campusiq-dashboard.png',
+      alt: 'CampusIQ dashboard showing real-time sensor monitoring',
+      github: 'https://github.com/BARATH2121',
+      demo: null,
+      inDev: false
+    },
+    {
+      id: 'travel-companion',
+      cats: ['software', 'ai', 'cloud'],
+      ticketTitle: 'TRAVEL COMPANION',
+      rows: [['CATEGORY', 'WEB + AI + CLOUD'], ['STACK', 'REACT / GEMINI / MAPS'], ['STATUS', 'FEATURED PROJECT']],
+      key: '// 02 · travel companion app',
+      text: 'Intelligent travel planning application with a Gemini-powered AI chatbot, live location services and Google Maps integration, plus SOS features for safer journeys.',
+      tech: ['React', 'Google Maps', 'Gemini AI', 'Firebase'],
+      image: null,
+      github: 'https://github.com/BARATH2121',
+      demo: null,
+      inDev: false
+    },
+    {
+      id: 'face-attendance',
+      cats: ['software', 'ai', 'cloud'],
+      ticketTitle: 'FACE ATTENDANCE',
+      rows: [['CATEGORY', 'AI + CLOUD'], ['STACK', 'AWS REKOGNITION / PYTHON'], ['STATUS', 'LIVE DEMO AVAILABLE']],
+      key: '// 03 · face recognition attendance',
+      text: 'Automated attendance system using AWS Rekognition for facial recognition, with cloud processing and DynamoDB for secure, efficient record storage.',
+      tech: ['AWS Rekognition', 'Python', 'DynamoDB'],
+      image: 'face-attendance-app.png',
+      alt: 'Face Attendance System application screen',
+      github: 'https://github.com/BARATH2121',
+      demo: 'https://famsystem.vercel.app/',
+      inDev: false
+    },
+    {
+      id: 'voice-assistant',
+      cats: ['software', 'ai'],
+      ticketTitle: 'VOICE ASSISTANT',
+      rows: [['CATEGORY', 'AI + AUTOMATION'], ['STACK', 'PYTHON / NLP'], ['STATUS', 'COMPLETED PROJECT']],
+      key: '// 04 · voice assistant app',
+      text: 'Voice recognition system with NLP-based command processing, exploring integration with IoT devices for automation.',
+      tech: ['Python', 'NLP'],
+      image: null,
+      github: 'https://github.com/BARATH2121',
+      demo: null,
+      inDev: false
+    },
+    {
+      id: 'expense-tracker',
+      cats: ['software', 'cloud'],
+      ticketTitle: 'EXPENSE TRACKER',
+      rows: [['CATEGORY', 'MOBILE + CLOUD'], ['STACK', 'FLUTTER / FIREBASE'], ['STATUS', 'COMPLETED PROJECT']],
+      key: '// 05 · expense tracker',
+      text: 'Cross-platform expense management app with real-time Firebase sync, offline capability and an analytics dashboard.',
+      tech: ['Flutter', 'Firebase'],
+      image: null,
+      github: 'https://github.com/BARATH2121',
+      demo: null,
+      inDev: false
+    },
+    {
+      id: 'docrx',
+      cats: ['software'],
+      ticketTitle: 'DOCRX HEALTHCARE',
+      rows: [['CATEGORY', 'ANDROID SOFTWARE'], ['STACK', 'ANDROID STUDIO'], ['STATUS', 'APPLICATION CONCEPT']],
+      key: '// 06 · healthcare app (docrx)',
+      text: 'Healthcare app concept covering appointment booking, prescription management and patient records.',
+      tech: ['Android Studio'],
+      image: null,
+      github: 'https://github.com/BARATH2121',
+      demo: null,
+      inDev: false
+    },
+    {
+      id: 'nexgig',
+      cats: ['software', 'cloud', 'dev'],
+      ticketTitle: 'NEXGIG MARKET',
+      rows: [['STAGE', 'IN DEVELOPMENT'], ['PLATFORM', 'KOTLIN / COMPOSE'], ['CLOUD', 'FIREBASE / MAPS']],
+      key: '// 07 · nexgig (in development)',
+      text: 'A mobile platform designed to connect students with short-term gig work — students discovering gigs, clients posting them, with location-aware discovery.',
+      flow: 'Concept: student/client profiles · location-based gig discovery · earnings tracking · notifications · maps · auth · real-time data',
+      tech: ['Kotlin', 'Jetpack Compose', 'Firebase', 'Google Maps'],
+      image: null,
+      github: null,
+      demo: null,
+      inDev: true
+    },
+    {
+      id: 'moodmusic',
+      cats: ['software', 'ai', 'dev'],
+      ticketTitle: 'MOODMUSIC APP',
+      rows: [['STAGE', 'IN DEVELOPMENT'], ['VISION', 'CAMERAX / ML KIT'], ['AUDIO', 'SPOTIFY + LOCAL']],
+      key: '// 08 · moodmusic (in development)',
+      text: 'An Android app combining facial emotion analysis with music playback, including local music support.',
+      flow: 'Camera → Face Detection → Emotion Analysis → Mood Classification → Playback',
+      tech: ['Kotlin', 'Jetpack Compose', 'CameraX', 'ML Kit', 'Spotify'],
+      image: null,
+      github: null,
+      demo: null,
+      inDev: true
+    },
+    {
+      id: 'offline-voice',
+      cats: ['software', 'ai', 'dev'],
+      ticketTitle: 'OFFLINE VOICE AI',
+      rows: [['STAGE', 'IN DEVELOPMENT'], ['ENGINE', 'VOSK / TARSOSDSP'], ['AUTH', 'MFCC VOICEPRINT']],
+      key: '// 09 · offline voice assistant',
+      text: 'An Android voice assistant focused on local speech recognition and voiceprint-based authentication — no cloud processing.',
+      flow: 'Voice Input → Offline Speech Recognition → Voice Authentication → Command Processing',
+      tech: ['Kotlin', 'Vosk', 'TarsosDSP', 'MFCC'],
+      image: null,
+      github: null,
+      demo: null,
+      inDev: true
+    },
+    {
+      id: 'hardware-scanner',
+      cats: ['software', 'dev'],
+      ticketTitle: 'HARDWARE SCANNER',
+      rows: [['STAGE', 'IN DEVELOPMENT'], ['CAPTURE', 'QR / BARCODE / OCR'], ['TARGET', 'IT ASSET INVENTORY']],
+      key: '// 10 · hardware inventory scanner',
+      text: 'An Android app concept for inventorying computer hardware — PCs, monitors, mice, keyboards, printers — via QR/barcode scanning or OCR.',
+      flow: 'QR/Barcode: Scan → Device ID → Inventory Record | No code: Camera → OCR → Serial Extraction → Inventory Record',
+      tech: ['Android', 'OCR', 'QR/Barcode Scanning'],
+      image: null,
+      github: null,
+      demo: null,
+      inDev: true
+    }
+  ];
+
+  const stage = document.getElementById('stage');
+  const frame = document.getElementById('frame');
+  const stageUi = document.getElementById('stageUi');
+  const wm = document.getElementById('wm');
+  const scriptText = document.getElementById('scriptText');
+  const badge = document.getElementById('badge');
+  const badgeHit = document.getElementById('badgeHit');
+  const mobileBadgeSlot = document.getElementById('mobileBadgeSlot');
+  const heroPlate = document.getElementById('heroPlate');
+  const diveBackdrop = document.getElementById('diveBackdrop');
+  const laptopRig = document.getElementById('laptopRig');
+  const screenFlash = document.getElementById('screenFlash');
+  const screenCasesMount = document.getElementById('screenCasesMount');
+  const screenHit = document.getElementById('screenHit');
+  const scrollHint = document.getElementById('scrollHint');
+  const ticket = document.getElementById('ticket');
+  const tTitle = document.getElementById('tTitle');
+  const tRows = document.getElementById('tRows');
+  const tLinks = document.getElementById('tLinks');
+  const caseDesc = document.getElementById('caseDesc');
+  const cKey = document.getElementById('cKey');
+  const cText = document.getElementById('cText');
+  const cNum = document.getElementById('cNum');
+  const btnPrevCase = document.getElementById('btnPrevCase');
+  const btnNextCase = document.getElementById('btnNextCase');
+  const dossierEl = document.getElementById('dossier');
+
+  let mode = 'hero'; // 'hero' | 'case' | 'dossier'
+  let busy = false;
+  let activeCat = 'all';
+  let filteredCases = CASES.slice();
+  let curIndex = 0;
+  let swayAnim = null;
+
+  /* Clone lanyard badge for mobile */
+  const mobileBadge = badge.cloneNode(true);
+  mobileBadge.removeAttribute('id');
+  mobileBadge.classList.remove('pre');
+  mobileBadgeSlot.appendChild(mobileBadge);
+
+  /* Render all 10 laptop screen views */
+  function buildScreenCases() {
+    screenCasesMount.innerHTML = CASES.map((c, idx) => {
+      const chips = c.tech.map(t => `<span>${t}</span>`).join('');
+      const badgeLabel = c.inDev ? `<span class="scr-status dev">IN DEVELOPMENT</span>` : `<span class="scr-status">${c.rows[0][1]}</span>`;
+      const visualBody = c.image
+        ? `<img class="scr-photo" src="${c.image}" alt="${c.alt || c.ticketTitle}">`
+        : `<div class="scr-mockup">
+             <div class="scr-mock-top">
+               <div>
+                 <div class="scr-mock-kicker">${c.key}</div>
+                 <div class="scr-mock-title">${c.ticketTitle}</div>
+               </div>
+               ${badgeLabel}
+             </div>
+             <div class="scr-mock-grid">
+               <div class="scr-panel">
+                 <div>
+                   <h5>SYSTEM OVERVIEW</h5>
+                   <p>${c.text}</p>
+                 </div>
+                 <div class="scr-chips">${chips}</div>
+               </div>
+               <div class="scr-panel">
+                 <h5>${c.inDev ? 'ARCHITECTURE / FLOW' : 'PROJECT TELEMETRY'}</h5>
+                 <div class="scr-flow-box">${c.flow ? c.flow : c.rows.map(r => `${r[0]}: ${r[1]}`).join('<br>')}</div>
+               </div>
+             </div>
+             <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#B8AEB1; display:flex; justify-content:space-between;">
+               <span>BARATH M // PORTFOLIO TERMINAL</span>
+               <span>CLICK SCREEN FOR NEXT CASE →</span>
+             </div>
+           </div>`;
+
+      return `<div class="case-stage-view" data-case-id="${c.id}">
+        <div class="scr-chrome">
+          <div class="scr-dots"><span></span><span></span><span></span><span style="margin-left:8px;">barath-m://${c.id}</span></div>
+          ${badgeLabel}
+        </div>
+        <div class="scr-body">${visualBody}</div>
+      </div>`;
+    }).join('');
+  }
+  buildScreenCases();
+
+  /* =========================================================
+     FRAME FITTING & RESPONSIVE GEOMETRY (pose)
+     ========================================================= */
+  function setViewportUnit() {
+    const W = window.innerWidth;
+    const H = window.innerHeight;
+    const n = W <= 820 ? W / 430 : Math.min(W / 1440, H / 900);
+    document.documentElement.style.setProperty('--n', n + 'px');
+    return { W, H, n };
+  }
+
+  function pose(targetMode) {
+    const { W, H } = setViewportUnit();
+    const isMob = W <= 820;
+    frame.classList.toggle('d-fade', !isMob);
+    frame.classList.toggle('m-fade', isMob);
+    frame.classList.toggle('m-case', targetMode === 'case');
+    stage.classList.toggle('m-case', targetMode === 'case');
+
+    let s, x, y;
+    if (!isMob) {
+      const cover = Math.max(W / 1440, H / 810);
+      const u = Math.min(W / 1440, H / 900);
+      if (targetMode === 'hero') {
+        s = cover;
+        x = (W - 1440 * s) / 2;
+        y = 0;
+        fitHero(x, y, s, W, H);
+      } else {
+        const top = 74 * u;
+        const fit = (H - top - 56 * u) / 680;
+        if (fit >= cover) {
+          s = cover;
+          y = Math.min(0, Math.max(H - 810 * s, top - 76 * s));
+        } else {
+          s = fit;
+          y = top - 76 * fit;
+        }
+        x = (W - 1440 * s) / 2;
+      }
+    } else {
+      const mbs = (W * 0.30) / 410;
+      document.documentElement.style.setProperty('--mbs', mbs.toFixed(4));
+      document.documentElement.style.setProperty('--th', (ticket.offsetHeight || 168) + 'px');
+
+      if (targetMode === 'hero') {
+        s = Math.min(W / 600, (0.64 * H) / 810);
+        x = W / 2 - 785 * s;
+        y = H - 790 * s;
+      } else {
+        const navH = 68;
+        const tH = ticket.offsetHeight || 168;
+        const dH = Math.max(54, caseDesc.offsetHeight || 66);
+        const uiBottom = 86 + tH + 14 + dH + 18;
+        s = Math.min((W - 24) / 976, Math.max(0.22, (H - navH - uiBottom) / 668));
+        x = W / 2 - 720 * s;
+        y = H - navH - 744 * s;
+      }
+    }
+    frame.style.transform = `translate(${x}px, ${y}px) scale(${s})`;
+  }
+
+  function fitHero(x, y, s, W, H) {
+    const vl = Math.max(0, -x / s);
+    const vr = Math.min(1440, (W - x) / s);
+    const vb = Math.min(810, (H - y) / s);
+    const pad = 22 / s;
+    wm.style.left = (vl + 0.6 * pad) + 'px';
+    wm.style.width = Math.max(600, vr - vl - 1.2 * pad) + 'px';
+    scriptText.style.left = (vl + pad + 42) + 'px';
+    badge.style.left = Math.min(1020, vr - pad - 365) + 'px';
+    badge.style.top = Math.min(-110, vb - 62 / s - 735) + 'px';
+  }
+
+  /* =========================================================
+     ENTRANCE ANIMATION & LANYARD SWAY
+     ========================================================= */
+  let entered = false;
+  function runEntrance() {
+    if (entered) return;
+    entered = true;
+    const pres = document.querySelectorAll('.pre');
+    if (RM) {
+      pres.forEach(el => el.classList.remove('pre'));
+      return;
+    }
+
+    const tags = [
+      document.getElementById('btnStudio'),
+      document.getElementById('btnPortfolio'),
+      document.getElementById('btnContacts'),
+      document.getElementById('btnDiscuss')
+    ];
+    tags.forEach((el, i) => {
+      el.classList.remove('pre');
+      el.animate([
+        { opacity: 0, transform: 'translateY(-40px) rotate(-4deg)' },
+        { opacity: 1, transform: 'none' }
+      ], { duration: 700, delay: 120 + i * 80, easing: 'cubic-bezier(.3,1.5,.5,1)', fill: 'both' });
+    });
+
+    wm.classList.remove('pre');
+    wm.animate([
+      { opacity: 0, transform: 'translateY(60px)', clipPath: 'inset(100% 0 0 0)' },
+      { opacity: 1, transform: 'none', clipPath: 'inset(0 0 0 0)' }
+    ], { duration: 1050, delay: 240, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'both' });
+
+    scriptText.classList.remove('pre');
+    scriptText.animate([
+      { opacity: 0, clipPath: 'inset(0 100% 0 0)' },
+      { opacity: 1, clipPath: 'inset(0 0 0 0)' }
+    ], { duration: 900, delay: 950, easing: 'cubic-bezier(.5,0,.3,1)', fill: 'both' });
+
+    badge.classList.remove('pre');
+    const bDrop = badge.animate([
+      { opacity: 0, transform: 'translateY(-110%) rotate(8deg)' },
+      { opacity: 1, transform: 'translateY(0) rotate(-3deg)', offset: 0.6 },
+      { opacity: 1, transform: 'translateY(0) rotate(1.6deg)', offset: 0.8 },
+      { opacity: 1, transform: 'rotate(0deg)' }
+    ], { duration: 1450, delay: 650, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'both' });
+
+    bDrop.onfinish = startSway;
+
+    scrollHint.classList.remove('pre');
+    scrollHint.animate([{ opacity: 0 }, { opacity: 0.88 }], { duration: 600, delay: 1650, fill: 'both' });
+
+    document.querySelectorAll('.m-only.pre').forEach(el => {
+      el.classList.remove('pre');
+      el.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 700, delay: 300, fill: 'both' });
+    });
+  }
+
+  function startSway() {
+    if (RM) return;
+    if (swayAnim) swayAnim.cancel();
+    swayAnim = badge.animate([
+      { transform: 'rotate(-1.2deg)' },
+      { transform: 'rotate(1.2deg)' }
+    ], { duration: 3200, iterations: Infinity, direction: 'alternate', easing: 'ease-in-out' });
+  }
+
+  badgeHit.addEventListener('pointerenter', () => {
+    if (RM || mode !== 'hero') return;
+    badge.animate([
+      { transform: 'rotate(0deg)' },
+      { transform: 'rotate(-6deg)', offset: 0.25 },
+      { transform: 'rotate(4deg)', offset: 0.55 },
+      { transform: 'rotate(-2deg)', offset: 0.8 },
+      { transform: 'rotate(0deg)' }
+    ], { duration: 1400, easing: 'ease-out', composite: 'add' });
+  });
+
+  /* =========================================================
+     CASE FILL & FILTERING
+     ========================================================= */
+  function pad2(n) { return String(n).padStart(2, '0'); }
+
+  function fillCase(index) {
+    if (!filteredCases.length) return;
+    curIndex = ((index % filteredCases.length) + filteredCases.length) % filteredCases.length;
+    const c = filteredCases[curIndex];
+
+    tTitle.textContent = c.ticketTitle;
+    tRows.innerHTML = c.rows.map(([k, v]) => `<div class="ticket-row"><span>${k}</span><b>${v}</b></div>`).join('');
+
+    if (c.inDev) {
+      tLinks.innerHTML = `<div class="ticket-dev-note">IN DEVELOPMENT · ARCHITECTURE PREVIEW (NO LIVE LINK YET)</div>`;
+    } else {
+      tLinks.innerHTML =
+        (c.github ? `<a class="ticket-link ghost" href="${c.github}" target="_blank" rel="noopener noreferrer">GitHub →</a>` : '') +
+        (c.demo ? `<a class="ticket-link" href="${c.demo}" target="_blank" rel="noopener noreferrer">Live Demo →</a>` : '');
+    }
+
+    cKey.textContent = c.key;
+    cText.textContent = c.text;
+    cNum.textContent = `${pad2(curIndex + 1)} / ${pad2(filteredCases.length)}`;
+    btnPrevCase.classList.toggle('dim', curIndex === 0);
+
+    document.querySelectorAll('.case-stage-view').forEach(el => {
+      el.classList.toggle('active', el.dataset.caseId === c.id);
+    });
+    if (window.innerWidth <= 820) {
+      document.documentElement.style.setProperty('--th', (ticket.offsetHeight || 168) + 'px');
+      pose('case');
+    }
+  }
+
+  function caseIn(first) {
+    const d = RM ? 0 : (first ? 150 : 0);
+    ticket.animate([
+      { opacity: 0, transform: 'translateY(-56px) rotate(-6deg)' },
+      { opacity: 1, transform: 'translateY(6px) rotate(1.2deg)', offset: 0.7 },
+      { opacity: 1, transform: 'none' }
+    ], { duration: RM ? 0 : 780, delay: d, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'both' });
+
+    const kids = Array.from(caseDesc.children);
+    kids.forEach((el, k) => {
+      el.animate([
+        { opacity: 0, transform: 'translateY(14px)' },
+        { opacity: 1, transform: 'none' }
+      ], { duration: RM ? 0 : 580, delay: RM ? 0 : (first ? 240 : 80) + k * 70, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'both' });
+    });
+  }
+
+  function caseOut() {
+    if (RM) return Promise.resolve();
+    const p1 = ticket.animate([
+      { opacity: 1, transform: 'none' },
+      { opacity: 0, transform: 'translateY(-40px) rotate(4deg)' }
+    ], { duration: 360, easing: 'cubic-bezier(.5,0,.75,0)', fill: 'both' }).finished;
+
+    const kids = Array.from(caseDesc.children);
+    const p2 = Promise.all(kids.map((el, k) => el.animate([
+      { opacity: 1, transform: 'none' },
+      { opacity: 0, transform: 'translateY(-10px)' }
+    ], { duration: 280, delay: k * 35, easing: 'ease-in', fill: 'both' }).finished));
+
+    return Promise.all([p1, p2]);
+  }
+
+  function flashScreen(peak = 0.55, dur = 560) {
+    if (RM) return;
+    screenFlash.animate([
+      { opacity: 0 },
+      { opacity: peak, offset: 0.25 },
+      { opacity: 0 }
+    ], { duration: dur, easing: 'ease-out' });
+  }
+
+  /* =========================================================
+     HERO -> LAPTOP DIVE TRANSITION (~1.7s Cinematic Camera Move)
+     ========================================================= */
+  function toCase(startIndex = 0) {
+    if (busy || mode === 'case') return;
+    busy = true;
+    if (heroVideo) heroVideo.pause();
+    if (rotationVideo) rotationVideo.pause();
+    document.body.classList.add('busy');
+
+    if (window.scrollY > 0) window.scrollTo({ top: 0, behavior: 'instant' });
+    document.body.classList.add('stage-locked');
+    stageUi.classList.remove('ui-hidden');
+
+    fillCase(startIndex);
+
+    if (RM) {
+      heroPlate.style.opacity = '0';
+      diveBackdrop.style.opacity = '1';
+      laptopRig.style.opacity = '1';
+      laptopRig.style.transform = 'none';
+      mode = 'case';
+      document.body.classList.add('is-case');
+      screenHit.style.display = 'block';
+      syncStageVideo();
+      pose('case');
+      caseIn(true);
+      busy = false;
+      document.body.classList.remove('busy');
+      return;
+    }
+
+    // Step 1: Hero typography & lanyard clear out
+    if (swayAnim) swayAnim.cancel();
+    wm.animate([{ opacity: 1, transform: 'none' }, { opacity: 0, transform: 'translateY(-42px)' }], { duration: 380, easing: 'cubic-bezier(.5,0,.75,0)', fill: 'both' });
+    scriptText.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 300, fill: 'both' });
+    badge.animate([{ opacity: 1, transform: 'none' }, { opacity: 0, transform: 'translateY(-110%) rotate(-6deg)' }], { duration: 380, easing: 'cubic-bezier(.5,0,.75,0)', fill: 'both' });
+
+    setTimeout(() => {
+      document.documentElement.style.setProperty('--glide', '1.6s');
+      frame.classList.add('glide');
+      pose('case');
+
+      // Step 2: Character & crimson studio push into depth perspective
+      heroPlate.animate([
+        { opacity: 1, transform: 'scale(1) translate3d(0,0,0)', filter: 'blur(0px)' },
+        { opacity: 0.35, transform: 'scale(1.36) translate3d(-40px, 28px, 0)', filter: 'blur(4px)', offset: 0.55 },
+        { opacity: 0, transform: 'scale(1.72) translate3d(-75px, 44px, 0)', filter: 'blur(10px)' }
+      ], { duration: 1250, easing: 'cubic-bezier(.65,0,.35,1)', fill: 'both' });
+
+      diveBackdrop.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 1100, easing: 'ease-out', fill: 'both' });
+
+      // Step 3: Silver laptop separates, floats toward camera & rotates square
+      laptopRig.animate([
+        { opacity: 0, transform: 'translate3d(-115px, 140px, -620px) scale(0.24) rotateY(-42deg) rotateX(18deg) rotateZ(-8deg)' },
+        { opacity: 1, transform: 'translate3d(-40px, 42px, -180px) scale(0.68) rotateY(-18deg) rotateX(8deg) rotateZ(-2deg)', offset: 0.42 },
+        { opacity: 1, transform: 'translate3d(0, 0, 0) scale(1) rotateY(0deg) rotateX(0deg) rotateZ(0deg)' }
+      ], { duration: 1620, easing: 'cubic-bezier(.22, 1, .36, 1)', fill: 'both' });
+
+      setTimeout(() => {
+        mode = 'case';
+        document.body.classList.add('is-case');
+        screenHit.style.display = 'block';
+        syncStageVideo();
+        flashScreen(0.65, 600);
+        caseIn(true);
+
+        setTimeout(() => {
+          frame.classList.remove('glide');
+          busy = false;
+          document.body.classList.remove('busy');
+        }, 550);
+      }, 1350);
+    }, 320);
+  }
+
+  /* =========================================================
+     CASE -> HERO RETURN TRANSITION
+     ========================================================= */
+  function toHero() {
+    if (busy || mode === 'hero') return;
+    busy = true;
+    document.body.classList.add('busy');
+    document.body.classList.add('stage-locked');
+    stageUi.classList.remove('ui-hidden');
+
+    caseOut();
+    document.body.classList.remove('is-case');
+    screenHit.style.display = 'none';
+
+    if (RM) {
+      laptopRig.style.opacity = '0';
+      diveBackdrop.style.opacity = '0';
+      heroPlate.style.opacity = '1';
+      heroPlate.style.transform = 'none';
+      heroPlate.style.filter = 'none';
+      wm.style.opacity = '1'; wm.style.transform = 'none';
+      scriptText.style.opacity = '1';
+      badge.style.opacity = '1'; badge.style.transform = 'none';
+      mode = 'hero';
+      syncStageVideo();
+      pose('hero');
+      busy = false;
+      document.body.classList.remove('busy');
+      return;
+    }
+
+    document.documentElement.style.setProperty('--glide', '0.95s');
+    frame.classList.add('glide');
+    mode = 'hero';
+    syncStageVideo();
+    pose('hero');
+
+    laptopRig.animate([
+      { opacity: 1, transform: 'translate3d(0,0,0) scale(1) rotateY(0deg)' },
+      { opacity: 0, transform: 'translate3d(-110px, 120px, -540px) scale(0.28) rotateY(-36deg) rotateX(14deg)' }
+    ], { duration: 760, easing: 'cubic-bezier(.65,0,.35,1)', fill: 'both' });
+
+    diveBackdrop.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 760, fill: 'both' });
+
+    heroPlate.animate([
+      { opacity: 0, transform: 'scale(1.45)', filter: 'blur(10px)' },
+      { opacity: 1, transform: 'scale(1)', filter: 'blur(0px)' }
+    ], { duration: 900, delay: 120, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'both' });
+
+    setTimeout(() => {
+      wm.animate([
+        { opacity: 0, transform: 'translateY(40px)' },
+        { opacity: 1, transform: 'none' }
+      ], { duration: 700, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'both' });
+
+      scriptText.animate([
+        { opacity: 0, clipPath: 'inset(0 100% 0 0)' },
+        { opacity: 1, clipPath: 'inset(0 0 0 0)' }
+      ], { duration: 700, delay: 200, easing: 'cubic-bezier(.5,0,.3,1)', fill: 'both' });
+
+      const bBack = badge.animate([
+        { opacity: 0, transform: 'translateY(-110%) rotate(6deg)' },
+        { opacity: 1, transform: 'translateY(0) rotate(-2deg)', offset: 0.7 },
+        { opacity: 1, transform: 'rotate(0deg)' }
+      ], { duration: 1050, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'both' });
+      bBack.onfinish = startSway;
+    }, 240);
+
+    setTimeout(() => {
+      frame.classList.remove('glide');
+      busy = false;
+      document.body.classList.remove('busy');
+    }, 980);
+  }
+
+  /* =========================================================
+     SWITCHING CASES IN PLACE
+     ========================================================= */
+  async function swapTo(nextIdx) {
+    if (busy || mode !== 'case') return;
+    busy = true;
+    await caseOut();
+    flashScreen(0.38, 420);
+    fillCase(nextIdx);
+    caseIn(false);
+    setTimeout(() => { busy = false; }, RM ? 0 : 480);
+  }
+
+  /* =========================================================
+     UNLOCKING & SCROLLING TO FULL DOSSIER
+     ========================================================= */
+  function openDossier(targetSelector, selectTab) {
+    document.body.classList.remove('stage-locked');
+    mode = 'dossier';
+    syncStageVideo();
+    stageUi.classList.add('ui-hidden');
+
+    if (selectTab) {
+      const tabBtn = document.querySelector(`.contact-tab[data-target="${selectTab}"]`);
+      if (tabBtn) tabBtn.click();
+    }
+    const target = document.querySelector(targetSelector || '#dossier');
+    if (target) {
+      requestAnimationFrame(() => {
+        target.scrollIntoView({ behavior: RM ? 'auto' : 'smooth' });
+      });
+    }
+  }
+
+  function returnToStage(targetMode) {
+    window.scrollTo({ top: 0, behavior: RM ? 'auto' : 'smooth' });
+    setTimeout(() => {
+      document.body.classList.add('stage-locked');
+      stageUi.classList.remove('ui-hidden');
+      if (targetMode === 'case') {
+        mode = 'hero';
+        toCase(curIndex);
+      } else {
+        mode = 'case';
+        toHero();
+      }
+    }, RM ? 0 : 350);
+  }
+
+  /* =========================================================
+     CASE FILTERING INSIDE LAPTOP MODE
+     ========================================================= */
+  document.querySelectorAll('.case-filter-pill').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (busy) return;
+      document.querySelectorAll('.case-filter-pill').forEach(b => b.setAttribute('aria-pressed', 'false'));
+      btn.setAttribute('aria-pressed', 'true');
+      activeCat = btn.dataset.cat;
+      filteredCases = activeCat === 'all' ? CASES.slice() : CASES.filter(c => c.cats.includes(activeCat));
+      swapTo(0);
+    });
+  });
+
+  /* =========================================================
+     INPUT CAPTURE (Wheel, Touch, Keys, Buttons)
+     ========================================================= */
+  let wheelLock = 0;
+  window.addEventListener('wheel', (e) => {
+    if (mode === 'dossier') {
+      if (window.scrollY <= 4 && e.deltaY < -30) {
+        stageUi.classList.remove('ui-hidden');
+      }
+      return;
+    }
+    e.preventDefault();
+    const now = Date.now();
+    if (busy || now - wheelLock < 850 || Math.abs(e.deltaY) < 18) return;
+    wheelLock = now;
+
+    if (mode === 'hero' && e.deltaY > 0) toCase(0);
+    else if (mode === 'case') {
+      if (e.deltaY > 0) swapTo(curIndex + 1);
+      else if (curIndex === 0) toHero();
+      else swapTo(curIndex - 1);
+    }
+  }, { passive: false });
+
+  let touchY = null, touchX = null;
+  stage.addEventListener('touchstart', (e) => {
+    if (mode === 'dossier') return;
+    touchY = e.touches[0].clientY;
+    touchX = e.touches[0].clientX;
+  }, { passive: true });
+
+  stage.addEventListener('touchend', (e) => {
+    if (mode === 'dossier' || touchY === null || busy) return;
+    const dy = touchY - e.changedTouches[0].clientY;
+    const dx = touchX - e.changedTouches[0].clientX;
+    touchY = touchX = null;
+
+    if (Math.abs(dy) < 40 && Math.abs(dx) < 40) return;
+    if (mode === 'hero' && dy > 40) toCase(0);
+    else if (mode === 'case') {
+      if (dy > 40 || dx > 40) swapTo(curIndex + 1);
+      else if (dy < -40 || dx < -40) {
+        if (curIndex === 0) toHero();
+        else swapTo(curIndex - 1);
+      }
+    }
+  }, { passive: true });
+
+  window.addEventListener('keydown', (e) => {
+    if (mode === 'dossier') return;
+    if (['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement.tagName)) return;
+    if (['ArrowDown', 'PageDown', ' '].includes(e.key)) {
+      e.preventDefault();
+      if (mode === 'hero') toCase(0);
+      else swapTo(curIndex + 1);
+    } else if (e.key === 'ArrowRight' && mode === 'case') {
+      e.preventDefault(); swapTo(curIndex + 1);
+    } else if (['ArrowUp', 'PageUp', 'ArrowLeft'].includes(e.key) && mode === 'case') {
+      e.preventDefault();
+      if (curIndex === 0) toHero();
+      else swapTo(curIndex - 1);
+    }
+  });
+
+  /* UI Button Wiring */
+  document.getElementById('btnPortfolio').addEventListener('click', () => toCase(0));
+  document.getElementById('btnStudio').addEventListener('click', () => {
+    if (mode === 'dossier') returnToStage('hero');
+    else toHero();
+  });
+  document.getElementById('btnCenterLogo').addEventListener('click', () => toHero());
+  document.getElementById('btnContacts').addEventListener('click', (e) => { e.preventDefault(); openDossier('#contact'); });
+  document.getElementById('btnDiscuss').addEventListener('click', (e) => { e.preventDefault(); openDossier('#contact', 'form-project'); });
+  document.getElementById('btnOpenDossierFromCase').addEventListener('click', () => openDossier('#what-i-do'));
+  document.getElementById('btnOpenDossierFromHero').addEventListener('click', () => openDossier('#what-i-do'));
+  document.getElementById('btnBackToStage').addEventListener('click', () => returnToStage('hero'));
+  document.getElementById('navBackTop').addEventListener('click', (e) => { e.preventDefault(); returnToStage('hero'); });
+  document.getElementById('servicesContactBtn').addEventListener('click', (e) => {
+    e.preventDefault();
+    const tabBtn = document.querySelector('.contact-tab[data-target="form-support"]');
+    if (tabBtn) tabBtn.click();
+    document.getElementById('contact').scrollIntoView({ behavior: RM ? 'auto' : 'smooth' });
+  });
+
+  btnPrevCase.addEventListener('click', () => {
+    if (curIndex === 0) toHero();
+    else swapTo(curIndex - 1);
+  });
+  btnNextCase.addEventListener('click', () => swapTo(curIndex + 1));
+  screenHit.addEventListener('click', () => swapTo(curIndex + 1));
+
+  /* Scroll-triggered dossier sync */
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 80) {
+      stageUi.classList.add('ui-hidden');
+    } else if (mode !== 'dossier') {
+      stageUi.classList.remove('ui-hidden');
+    }
+  }, { passive: true });
+
+  /* =========================================================
+     DOSSIER WORK ARCHIVE FILTERS
+     ========================================================= */
+  document.querySelectorAll('.work-filters .filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.work-filters .filter-btn').forEach(b => b.setAttribute('aria-pressed', 'false'));
+      btn.setAttribute('aria-pressed', 'true');
+      const filter = btn.dataset.filter;
+      document.querySelectorAll('#work [data-category]').forEach(card => {
+        const cats = card.dataset.category.split(/\s+/);
+        card.classList.toggle('is-filtered-out', filter !== 'all' && !cats.includes(filter));
+      });
+    });
+  });
+
+  /* =========================================================
+     CONTACT TABS, VALIDATION & MAILTO BEHAVIOUR
+     ========================================================= */
+  document.querySelectorAll('.contact-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.contact-tab').forEach(t => t.setAttribute('aria-selected', 'false'));
+      tab.setAttribute('aria-selected', 'true');
+      document.querySelectorAll('.contact-form').forEach(f => f.classList.remove('active'));
+      document.getElementById(tab.dataset.target).classList.add('active');
+    });
+  });
+
+  document.getElementById('form-project').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('p-name').value.trim();
+    const email = document.getElementById('p-email').value.trim();
+    const opp = document.getElementById('p-opportunity').value.trim();
+    const msg = document.getElementById('p-message').value.trim();
+
+    document.getElementById('err-p-name').textContent = name ? '' : 'Please enter your name.';
+    document.getElementById('err-p-email').textContent = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ? '' : 'Please enter a valid email.';
+    document.getElementById('err-p-message').textContent = msg ? '' : 'Please enter a message.';
+
+    if (!name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || !msg) return;
+
+    const subject = encodeURIComponent(`Portfolio Inquiry${opp ? ': ' + opp : ''} — from ${name}`);
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nProject / Opportunity: ${opp || 'N/A'}\n\nMessage:\n${msg}`);
+    document.getElementById('status-project').textContent = 'Opening your email client with the pre-filled message to mbarath2121@gmail.com...';
+    window.location.href = `mailto:mbarath2121@gmail.com?subject=${subject}&body=${body}`;
+  });
+
+  document.getElementById('form-support').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('s-name').value.trim();
+    const contact = document.getElementById('s-contact').value.trim();
+    const device = document.getElementById('s-device').value;
+    const issue = document.getElementById('s-issue').value.trim();
+
+    document.getElementById('err-s-name').textContent = name ? '' : 'Please enter your name.';
+    document.getElementById('err-s-contact').textContent = contact ? '' : 'Please enter an email or phone number.';
+    document.getElementById('err-s-issue').textContent = issue ? '' : 'Please describe the issue.';
+
+    if (!name || !contact || !issue) return;
+
+    const subject = encodeURIComponent(`Tech Support Request (${device}) — from ${name}`);
+    const body = encodeURIComponent(`Name: ${name}\nContact: ${contact}\nDevice Type: ${device}\n\nIssue Description:\n${issue}`);
+    document.getElementById('status-support').textContent = 'Opening your email client with the pre-filled request to mbarath2121@gmail.com...';
+    window.location.href = `mailto:mbarath2121@gmail.com?subject=${subject}&body=${body}`;
+  });
+
+  /* =========================================================
+     SCROLL REVEAL OBSERVER
+     ========================================================= */
+  if ('IntersectionObserver' in window && !RM) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(en => {
+        if (en.isIntersecting) {
+          en.target.classList.add('in');
+          io.unobserve(en.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+  }
+
+  /* =========================================================
+     AUTOMATIC VIDEO HANDOFF + AUDIO UNLOCK
+     Try audible autoplay first. Browsers may block it until the
+     visitor interacts once; after that, audio follows the active
+     scene automatically. No visible sound buttons are shown.
+     ========================================================= */
+  const heroVideo = heroPlate.querySelector('.hero-plate-video');
+  const rotationVideo = document.querySelector('.ticket-360-video');
+  let audioUnlocked = false;
+
+  async function syncStageVideo() {
+    const showCaseVideo = mode === 'case';
+    const activeVideo = showCaseVideo ? rotationVideo : heroVideo;
+    const inactiveVideo = showCaseVideo ? heroVideo : rotationVideo;
+    if (inactiveVideo) inactiveVideo.pause();
+    if (!activeVideo || mode === 'dossier') {
+      if (activeVideo) activeVideo.pause();
+      return;
+    }
+    activeVideo.muted = !audioUnlocked;
+    try {
+      await activeVideo.play();
+    } catch (error) {
+      // Audible autoplay can be denied by browser policy. Keep the
+      // active video moving silently until a later accepted gesture.
+      audioUnlocked = false;
+      activeVideo.muted = true;
+      activeVideo.play().catch(() => {});
+    }
+  }
+
+  async function unlockStageAudio() {
+    if (audioUnlocked) return;
+    audioUnlocked = true;
+    await syncStageVideo();
+  }
+
+  // Initial attempt: sound may work for returning/engaged visitors.
+  // Otherwise start silently and unlock on the visitor's first gesture.
+  if (rotationVideo) rotationVideo.pause();
+  if (heroVideo) {
+    heroVideo.muted = false;
+    heroVideo.play().then(() => { audioUnlocked = true; }).catch(() => {
+      heroVideo.muted = true;
+      heroVideo.play().catch(() => {});
+    });
+  }
+  ['pointerdown', 'touchstart', 'keydown', 'wheel'].forEach((eventName) => {
+    document.addEventListener(eventName, unlockStageAudio, { once: true, passive: true });
+  });
+
+  /* =========================================================
+     BOOT SEQUENCE
+     ========================================================= */
+  pose('hero');
+  window.addEventListener('resize', () => {
+    frame.classList.remove('glide');
+    pose(mode === 'case' ? 'case' : 'hero');
+  });
+
+  const fontsReady = document.fonts ? document.fonts.ready : Promise.resolve();
+  const heroVideoReady = new Promise(res => {
+    if (!heroVideo || heroVideo.readyState >= 1) res();
+    else {
+      heroVideo.addEventListener('loadedmetadata', res, { once: true });
+      heroVideo.addEventListener('error', res, { once: true });
+    }
+  });
+
+  Promise.race([
+    Promise.all([fontsReady, heroVideoReady]),
+    new Promise(res => setTimeout(res, 2200))
+  ]).then(() => requestAnimationFrame(runEntrance));
+
+  setTimeout(runEntrance, 3500);
+})();
+</script>
+</body>
+</html>
